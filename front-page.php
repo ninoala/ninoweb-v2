@@ -22,6 +22,28 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nexter.png"alt="Nexter Website Screenshot">
             </div>
         </div>
+
+        <ul class="hero-services">
+            <li>
+                <i class="fa-solid fa-bezier-curve"></i>
+                Custom Design
+            </li>
+
+            <li>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                Mobile Friendly
+            </li>
+
+            <li>
+                <i class="fa-brands fa-searchengin"></i>
+                SEO Optimized
+            </li>
+
+            <li>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                Ongoing Support
+            </li>
+</ul>
     </section>
 
     <section id="services" class="services section">
@@ -32,7 +54,8 @@
         <div class="services-grid">
 
             <article class="service-card">
-                <div class="service-icon">🌐</div>
+                <div class="service-icon">
+                    <i class="fa-solid fa-globe"></i></div>
                 <h3>Custom WordPress Websites</h3>
                 <p>Professional websites tailored to your business, optimized for mobile devices, search engines, and a great user experience.</p>
                 <ul class="service-features">
@@ -43,7 +66,9 @@
             </article>
 
             <article class="service-card">
-                <div class="service-icon">🔄</div>
+                <div class="service-icon">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
                 <h3>Website Redesigns & Modernization</h3>
                 <p>
                 Transform outdated websites into modern, responsive experiences
@@ -57,7 +82,9 @@
             </article>
 
             <article class="service-card">
-                <div class="service-icon">🛠</div>
+                <div class="service-icon">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
                 <h3>Maintenance & Support</h3>
                 <p>
                 Ongoing updates, content changes, troubleshooting,
@@ -80,7 +107,13 @@
 
         <div class="projects-grid">
             <article class="project-card project-card-large">
-                <div class="project-image"></div>
+                <div class="project-image">
+                    <img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/cardoctor.png"
+                        alt="CarDoctor Website Screenshot"
+                    >
+                </div>
+
                 <div class="project-content">
                     <p class="project-label">Client Project</p>
                     <h3>CarDoctor</h3>
@@ -88,17 +121,29 @@
                 </div>
             </article>
 
-            <article class="project-card">
-                <div class="project-image"></div>
+            <article class="project-card project-card-large">
+                <div class="project-image">
+                    <img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/nexxter.png"
+                        alt="Nexter Website Screenshot"
+                    >
+                </div>
+
                 <div class="project-content">
                     <p class="project-label">Concept Build</p>
-                    <h3>Real Estate Website</h3>
+                    <h3>Real Estate Website (Nexter)</h3>
                     <p>Responsive layout for listings, agent branding, and lead generation.</p>
                 </div>
             </article>
 
-            <article class="project-card">
-                <div class="project-image"></div>
+            <article class="project-card project-card-large">
+                <div class="project-image">
+                    <img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/natours.png"
+                        alt="Natours Website Screenshot"
+                    >
+                </div>
+
                 <div class="project-content">
                     <p class="project-label">Concept Build</p>
                     <h3>Natours</h3>
@@ -106,8 +151,14 @@
                 </div>
             </article>
 
-            <article class="project-card">
-                <div class="project-image"></div>
+            <article class="project-card project-card-large">
+                <div class="project-image">
+                    <img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/ynino.png"
+                        alt="Portfolio Website Screenshot"
+                    >
+                </div>
+
                 <div class="project-content">
                     <p class="project-label">React Portfolio</p>
                     <h3>YNino.dev</h3>
@@ -115,12 +166,18 @@
                 </div>
             </article>
 
-            <article class="project-card">
-                <div class="project-image"></div>
+            <article class="project-card project-card-large">
+                <div class="project-image">
+                    <img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/trillo.png"
+                        alt="Portfolio Website Screenshot"
+                    >
+                </div>
+
                 <div class="project-content">
                     <p class="project-label">Concept Build</p>
-                    <h3>Restaurant Website</h3>
-                    <p>Modern restaurant layout for menus, hours, location, and reservations.</p>
+                    <h3>Trillo Booking App</h3>
+                    <p>Something will be here later</p>
                 </div>
             </article>
         </div>
@@ -129,43 +186,65 @@
 <section id="about" class="about section">
     <div class="container">
 
+        <p class="section-eyebrow">About</p>
+
+        <h2 class="about-heading">
+            Web Developer<br>
+            Based in Ottawa
+        </h2>
+
         <div class="about-grid">
 
-            <div class="about-content">
-                <p class="section-eyebrow">About</p>
+            <div class="about-panel">
 
-                <h2>Hi, I'm Yegor.</h2>
-
-                <p>
-                    I'm a web developer based in Ottawa, helping small businesses
-                    create modern, professional websites that build trust and attract customers.
-                </p>
-
-                <p>
-                    I specialize in WordPress development, responsive design,
-                    website redesigns, and ongoing website support.
-                </p>
-
-                <div class="about-skills">
-                    <span>WordPress</span>
-                    <span>React</span>
-                    <span>JavaScript</span>
-                    <span>PHP</span>
-                    <span>Sass</span>
-                    <span>SEO</span>
+                <div class="about-brand">
+                    <h3>Nino<span>Web</span></h3>
+                    <p>WordPress & React Development</p>
                 </div>
+
+                <ul class="about-services">
+                    <li><i class="fa-solid fa-desktop"></i> Custom WordPress Development</li>
+                    <li><i class="fa-solid fa-arrows-rotate"></i> Website Redesigns & Modernization</li>
+                    <li><i class="fa-solid fa-mobile-screen-button"></i> Responsive Design & Mobile Friendly</li>
+                    <li><i class="fa-solid fa-shield-halved"></i> Ongoing Support & Maintenance</li>
+                </ul>
+
+                <div class="about-location">
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+                        <strong>Ottawa, Ontario</strong>
+                        <p>Available for new projects</p>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="about-card">
-                <h3>Why work with NinoWeb?</h3>
+            <div class="about-content">
 
-                <ul>
-                    <li>Custom-built websites</li>
-                    <li>Mobile-friendly design</li>
-                    <li>Fast and responsive support</li>
-                    <li>Modern design principles</li>
-                    <li>Ongoing maintenance available</li>
-                </ul>
+                <h3>Helping Small Businesses Build Their Online Presence</h3>
+
+                <div class="about-line"></div>
+
+                <p>
+                    I started NinoWeb to help small businesses create modern,
+                    professional websites without the complexity and cost of
+                    large agencies.
+                </p>
+
+                <p>
+                    My focus is on clean design, responsive development,
+                    performance, and long-term support. Whether you need a new
+                    website or want to modernize an existing one, I can help
+                    bring your ideas to life.
+                </p>
+
+                <p>
+                    Every project is built with the goal of creating a website
+                    that looks professional, builds trust, and helps your
+                    business grow online.
+                </p>
+
             </div>
 
         </div>
@@ -188,7 +267,7 @@
 
             <div class="contact-actions">
                 <a href="mailto:hello@ninoweb.net" class="btn btn-primary">
-                    Get a Free Quote
+                    Start Your Project
                 </a>
 
                 <a href="#projects" class="btn btn-secondary">

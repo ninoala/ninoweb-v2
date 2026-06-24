@@ -17,7 +17,19 @@
             Nino<span>Web</span>
         </a>
 
-        <nav class="site-nav">
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-navigation"
+            aria-label="Open navigation"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="site-navigation" class="site-nav">
             <a href="#services">Services</a>
             <a href="#projects">Projects</a>
             <a href="#about">About</a>
