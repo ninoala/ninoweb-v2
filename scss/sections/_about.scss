@@ -1,0 +1,166 @@
+/* --------------------
+   ABOUT
+-------------------- */
+
+.about {
+  background: #f5f8fc;
+}
+
+.about-heading {
+  max-width: 700px;
+  margin-bottom: 60px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about-panel {
+  padding: 48px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #061b35, #0d2647);
+  border-radius: 32px;
+  box-shadow: 0 30px 80px rgba(6, 27, 53, 0.15);
+}
+
+.about-brand {
+  text-align: center;
+}
+
+.about-brand h3 {
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+
+.about-brand span {
+  color: #ff8a00;
+}
+
+.about-brand p {
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.about-services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+
+  margin: 40px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.about-services li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 120px;
+  margin: 0;
+  padding: 18px 12px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.about-services i {
+  width: auto;
+  color: #ff8a00;
+  font-size: 1.5rem;
+}
+
+.about-services span {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.about-location {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+}
+
+.about-location i {
+  color: #ff8a00;
+  font-size: 1.8rem;
+}
+
+.about-location p {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about-content h3 {
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.about-line {
+  width: 70px;
+  height: 4px;
+  margin: 24px 0 40px;
+  background: #ff8a00;
+  border-radius: 999px;
+}
+
+.about-content p {
+  margin-bottom: 28px;
+  color: #4b5f76;
+  line-height: 1.9;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-heading {
+    margin-bottom: 40px;
+  }
+
+  .about-panel {
+    padding: 32px 26px;
+    border-radius: 24px;
+  }
+
+  .about-brand h3 {
+    font-size: 2.25rem;
+  }
+
+  .about-services {
+    margin: 36px 0;
+  }
+
+  .about-services li {
+    align-items: flex-start;
+    margin-bottom: 22px;
+  }
+
+  .about-location {
+    padding: 20px;
+  }
+
+  .about-content h3 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,151 @@
+/* --------------------
+   HEADER
+-------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  color: #ffffff;
+  background: rgba(6, 27, 53, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.site-logo span {
+  color: #ff8a00;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.site-nav a:hover {
+  color: #ff8a00;
+}
+
+.nav-cta {
+  padding: 10px 18px;
+  color: #061b35;
+  font-weight: 700;
+  background: #ff8a00;
+  border-radius: 999px;
+}
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 6px auto;
+  background: #ffffff;
+  border-radius: 999px;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    position: relative;
+    z-index: 1101;
+    display: block;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    width: min(82vw, 380px);
+    height: 100dvh;
+    padding: 110px 32px 40px;
+
+    visibility: hidden;
+    background: #061b35;
+    border: 0;
+    border-radius: 0;
+    box-shadow: -24px 0 60px rgba(0, 0, 0, 0.35);
+    transform: translateX(105%);
+
+    transition:
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .site-nav.is-open {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 20px 0;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .site-nav .nav-cta {
+    margin-top: 28px;
+    padding: 15px 20px;
+    color: #061b35;
+    text-align: center;
+    background: #ff8a00;
+    border: 0;
+    border-radius: 999px;
+  }
+
+  .menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
