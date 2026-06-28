@@ -1,7 +1,7 @@
 <section id="services" class="services section">
     <div class="container">
         <p class="section-eyebrow">Services</p>
-        <h2>Helping small businesses succeed online</h2>
+        <h2>Website services built around your business</h2>
 
         <div class="services-grid">
             <article class="service-card">

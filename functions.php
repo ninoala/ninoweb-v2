@@ -43,6 +43,14 @@ function ninoweb_enqueue_assets() {
         filemtime(get_theme_file_path('/assets/js/navigation.js')),
         true
     );
+
+    wp_enqueue_script(
+        'ninoweb-accordeon',
+        get_theme_file_uri('/assets/js/accordeon.js'),
+        [],
+        filemtime(get_theme_file_path('/assets/js/accordeon.js')),
+        true
+    );
 }
 
 add_action('wp_enqueue_scripts', 'ninoweb_enqueue_assets');

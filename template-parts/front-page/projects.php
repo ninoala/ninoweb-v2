@@ -1,7 +1,11 @@
 <section id="projects" class="projects section">
     <div class="container">
-        <p class="section-eyebrow">Featured Work</p>
-        <h2>Real projects and polished concept builds</h2>
+        <p class="section-eyebrow">Selected Work</p>
+        <h2>Real client projects and polished website concepts</h2>
+        <p class="projects-intro">
+            A selection of live client work and concept projects focused on clear
+            design, mobile usability, and real business goals.
+        </p>
 
         <div class="projects-grid">
             <article class="project-card project-card-large">
