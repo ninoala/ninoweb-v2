@@ -1,9 +1,9 @@
 <section id="projects" class="projects section">
     <div class="container">
         <p class="section-eyebrow">Selected Work</p>
-        <h2>Real client projects and polished website concepts</h2>
+        <h2>A look at our work</h2>
         <p class="projects-intro">
-            A selection of live client work and concept projects focused on clear
+            A selection of projects focused on clear
             design, mobile usability, and real business goals.
         </p>
 
@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="project-content">
-                    <p class="project-label">Client Project</p>
+                    <p class="project-label">Car Repair Shop</p>
                     <h3>CarDoctor</h3>
                     <p class="project-description">
                         Custom WordPress website for an automotive service business.
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="project-content">
-                    <p class="project-label">Concept Build</p>
+                    <p class="project-label">Luxury Real Estate</p>
 
                     <h3>Real Estate Website (Nexter)</h3>
 
@@ -71,11 +71,11 @@
 
                         <a
                             class="project-link"
-                            href="https://ynino.dev/YOUR-NEXTER-PATH"
+                            href="https://ynino.dev/nexter"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            View Demo
+                            View Project
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="project-content">
-                    <p class="project-label">Concept Build</p>
+                    <p class="project-label">Adventure Travel Company</p>
 
                     <h3>Natours</h3>
 
@@ -110,11 +110,11 @@
 
                         <a
                             class="project-link"
-                            href="https://ynino.dev/YOUR-NATOURS-PATH"
+                            href="https://ynino.dev/natours"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            View Demo
+                            View Project
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
@@ -134,10 +134,10 @@
                 <div class="project-content">
                     <p class="project-label">React Portfolio</p>
 
-                    <h3>YNino.dev</h3>
+                    <h3>ynino.dev</h3>
 
                     <p class="project-description">
-                        Personal developer portfolio built with React and Sass.
+                        A personal website created to showcase development work and experience.
                     </p>
 
                     <div class="project-footer">
@@ -153,7 +153,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Visit Portfolio
+                            View Project
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
@@ -171,7 +171,7 @@
                 </div>
 
                 <div class="project-content">
-                    <p class="project-label">Concept Build</p>
+                    <p class="project-label">Hotel Booking Platform</p>
 
                     <h3>Trillo Booking App</h3>
 
@@ -188,11 +188,11 @@
 
                         <a
                             class="project-link"
-                            href="https://ynino.dev/YOUR-TRILLO-PATH"
+                            href="https://ynino.dev/trillo"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            View Demo
+                            View Project
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>

@@ -64,9 +64,21 @@
                 <h4>Services</h4>
 
                 <ul>
-                    <li>Custom WordPress Websites</li>
-                    <li>Website Redesigns</li>
-                    <li>Maintenance &amp; Support</li>
+                    <li> 
+                        <a href="<?php echo esc_url(home_url('/#services')); ?>">
+                            Custom WordPress Websites 
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="<?php echo esc_url(home_url('/#services')); ?>">
+                            Website Redesigns
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="<?php echo esc_url(home_url('/#services')); ?>">
+                            Maintenance &amp; Support
+                        </a>
+                    </li>
                 </ul>
             </div>
 
@@ -107,6 +119,12 @@
 
     </div>
 </footer>
+
+<?php
+get_template_part(
+    'template-parts/global/contact-dock'
+);
+?>
 
 <?php wp_footer(); ?>
 

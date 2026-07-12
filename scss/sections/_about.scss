@@ -10,7 +10,9 @@
   max-width: 1040px;
 }
 
-/* Heading */
+/* --------------------
+   Heading
+-------------------- */
 
 .about-heading {
   max-width: 720px;
@@ -30,7 +32,9 @@
   line-height: 1.8;
 }
 
-/* Main layout */
+/* --------------------
+   Main layout
+-------------------- */
 
 .about-grid {
   display: grid;
@@ -39,7 +43,9 @@
   align-items: center;
 }
 
-/* Dark panel */
+/* --------------------
+   Dark panel
+-------------------- */
 
 .about-panel {
   position: relative;
@@ -49,7 +55,8 @@
 
   color: #ffffff;
 
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 90% 10%,
       rgba(255, 138, 0, 0.14),
       transparent 35%
@@ -76,7 +83,9 @@
   pointer-events: none;
 }
 
-/* Brand */
+/* --------------------
+   Brand
+-------------------- */
 
 .about-brand {
   position: relative;
@@ -106,7 +115,9 @@
   line-height: 1.6;
 }
 
-/* Trust points */
+/* --------------------
+   Trust points
+-------------------- */
 
 .about-services {
   position: relative;
@@ -150,7 +161,9 @@
   line-height: 1.4;
 }
 
-/* Location */
+/* --------------------
+   Location
+-------------------- */
 
 .about-location {
   position: relative;
@@ -194,14 +207,16 @@
   line-height: 1.5;
 }
 
-/* Text content */
+/* --------------------
+   Text content
+-------------------- */
 
 .about-content {
   min-width: 0;
 }
 
 .about-kicker {
-  margin: 0 0 12px;
+  margin: 0 0 18px;
 
   color: #ff8a00;
   font-size: 0.72rem;
@@ -210,24 +225,92 @@
   letter-spacing: 0.09em;
 }
 
-.about-content h3 {
-  max-width: 560px;
-  margin: 0;
+/* --------------------
+   Developer introduction
+-------------------- */
+
+.about-person {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  min-width: 0;
+}
+
+.about-photo {
+  position: relative;
+
+  flex: 0 0 150px;
+
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 5px solid #ff8a00;
+  border-radius: 50%;
+
+  box-shadow:
+    0 16px 34px rgba(6, 27, 53, 0.15),
+    0 5px 12px rgba(6, 27, 53, 0.08);
+}
+
+.about-photo::after {
+  display: none;
+}
+
+.about-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 32%;
+
+  border-radius: 50%;
+}
+
+.about-person-heading {
+  min-width: 0;
+}
+
+.about-person-heading h3 {
+  max-width: 470px;
+  margin: 0 0 12px;
 
   color: #102033;
-  font-size: clamp(2rem, 3.5vw, 2.65rem);
+  font-size: clamp(1.8rem, 3vw, 2.45rem);
   line-height: 1.15;
   letter-spacing: -0.04em;
 }
 
+.about-person-heading p {
+  max-width: 390px;
+  margin: 0;
+
+  color: #64758a;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* --------------------
+   Divider
+-------------------- */
+
 .about-line {
   width: 58px;
   height: 4px;
-  margin: 24px 0 30px;
+  margin: 28px 0 30px;
 
   background: #ff8a00;
   border-radius: 999px;
 }
+
+/* --------------------
+   Paragraphs
+-------------------- */
 
 .about-content > p:not(.about-kicker) {
   margin: 0 0 20px;
@@ -237,7 +320,9 @@
   line-height: 1.82;
 }
 
-/* Checklist */
+/* --------------------
+   Checklist
+-------------------- */
 
 .about-points {
   display: grid;
@@ -276,7 +361,9 @@
   border-radius: 50%;
 }
 
-/* Link */
+/* --------------------
+   Contact link
+-------------------- */
 
 .about-link {
   display: inline-flex;
@@ -289,7 +376,9 @@
   font-size: 0.88rem;
   font-weight: 800;
 
-  transition: color 0.25s ease, gap 0.25s ease;
+  transition:
+    color 0.25s ease,
+    gap 0.25s ease;
 }
 
 .about-link i {
@@ -303,32 +392,79 @@
   color: #ff8a00;
 }
 
-/* Tablet */
+.about-link:focus-visible {
+  outline: 3px solid rgba(255, 138, 0, 0.25);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+/* --------------------
+   Tablet
+-------------------- */
 
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 46px;
+    gap: 50px;
   }
 
   .about-panel {
+    width: 100%;
     max-width: 620px;
   }
 
   .about-content {
+    width: 100%;
     max-width: 700px;
+  }
+
+  .about-person-heading h3 {
+    max-width: 520px;
   }
 }
 
-/* Mobile */
+/* --------------------
+   Small tablet
+-------------------- */
+
+@media (max-width: 700px) {
+  .about-person {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .about-photo {
+    flex-basis: 125px;
+
+    width: 125px;
+    height: 125px;
+  }
+
+  .about-person-heading h3 {
+    font-size: 1.85rem;
+  }
+
+  .about-person-heading p {
+    font-size: 0.86rem;
+  }
+}
+
+/* --------------------
+   Mobile
+-------------------- */
 
 @media (max-width: 600px) {
   .about-heading {
     margin-bottom: 38px;
   }
 
+  .about-grid {
+    gap: 42px;
+  }
+
   .about-panel {
     padding: 30px 23px;
+
     border-radius: 23px;
   }
 
@@ -338,6 +474,7 @@
 
   .about-services {
     gap: 10px;
+
     margin: 29px 0;
   }
 
@@ -354,11 +491,66 @@
     padding: 16px;
   }
 
-  .about-content h3 {
-    font-size: 2rem;
-  }
-
   .about-content > p:not(.about-kicker) {
     font-size: 0.94rem;
+  }
+}
+
+/* --------------------
+   Small mobile
+-------------------- */
+
+@media (max-width: 520px) {
+  .about-person {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-photo {
+    flex-basis: auto;
+
+    width: 138px;
+    height: 138px;
+  }
+
+  .about-person-heading h3 {
+    max-width: 420px;
+
+    font-size: 1.9rem;
+  }
+
+  .about-line {
+    margin-top: 25px;
+  }
+}
+
+/* --------------------
+   Very small mobile
+-------------------- */
+
+@media (max-width: 390px) {
+  .about-panel {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .about-services {
+    grid-template-columns: 1fr;
+  }
+
+  .about-services li {
+    min-height: 92px;
+  }
+
+  .about-location {
+    align-items: flex-start;
+  }
+
+  .about-person-heading h3 {
+    font-size: 1.75rem;
+  }
+
+  .about-photo {
+    margin: 0 auto;
   }
 }

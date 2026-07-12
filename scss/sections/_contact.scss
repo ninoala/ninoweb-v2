@@ -63,13 +63,115 @@
   line-height: 1.8;
 }
 
+/* Contact channels */
+
+.contact-channels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.contact-channel {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+
+  min-width: 0;
+  min-height: 128px;
+  padding: 17px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+
+  transition: transform 0.25s ease, background-color 0.25s ease,
+    border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-channel:hover {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 138, 0, 0.55);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+
+  transform: translateY(-3px);
+}
+
+.contact-channel:focus-visible {
+  outline: 3px solid rgba(255, 138, 0, 0.45);
+  outline-offset: 3px;
+}
+
+.contact-channel-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  font-size: 1.2rem;
+
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.contact-channel--line .contact-channel-icon {
+  color: #06c755;
+}
+
+.contact-channel--whatsapp .contact-channel-icon {
+  color: #25d366;
+}
+
+.contact-channel--instagram .contact-channel-icon {
+  color: #f56040;
+}
+
+.contact-channel-copy {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.contact-channel-copy strong {
+  color: #ffffff;
+  font-size: 0.86rem;
+}
+
+.contact-channel-arrow {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.65rem;
+
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.contact-channel:hover .contact-channel-arrow {
+  color: #ff8a00;
+  transform: translate(2px, -2px);
+}
+
 /* Benefits */
 
 .contact-benefits {
   display: grid;
   gap: 18px;
 
-  margin: 38px 0 0;
+  margin: 30px 0 0;
   padding: 0;
 
   list-style: none;
@@ -320,4 +422,32 @@
   .contact-benefits {
     gap: 16px;
   }
+
+  .contact-channels {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.contact-channel {
+  flex-direction: row;
+  align-items: center;
+
+  min-height: 0;
+  padding: 14px 48px 14px 14px;
+}
+
+.contact-channel-copy {
+  gap: 2px;
+}
+
+.contact-channel-arrow {
+  top: 50%;
+  right: 18px;
+
+  transform: translateY(-50%);
+}
+
+.contact-channel:hover .contact-channel-arrow {
+  transform: translate(2px, calc(-50% - 2px));
+}
 }

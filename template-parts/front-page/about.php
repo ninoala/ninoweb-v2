@@ -83,38 +83,68 @@
             <div class="about-content">
                 <p class="about-kicker">Meet Your Developer</p>
 
-                <h3>Hi, I’m Yegor — the person behind NinoWeb.</h3>
+                <div class="about-person">
+                    <div class="about-photo">
+                        <img
+                            src="<?php echo esc_url(
+                                get_template_directory_uri() .
+                                '/assets/images/yegor-headshot.png'
+                            ); ?>"
+                            alt="Yegor Nino, web designer and developer behind NinoWeb"
+                            width="180"
+                            height="180"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+
+                    <div class="about-person-heading">
+                        <h3>Hi, I’m Yegor — the person behind NinoWeb.</h3>
+
+                        <p>
+                            Independent web designer and developer based in Ottawa.
+                        </p>
+                    </div>
+                </div>
 
                 <div class="about-line"></div>
 
                 <p>
-                    I help small businesses build modern, professional
-                    websites without the complexity of working with a large
-                    agency. You communicate directly with me throughout the
-                    entire project.
+                    I help small businesses build modern, professional websites
+                    without the complexity of working with a large agency. You
+                    communicate directly with me throughout the entire project.
                 </p>
 
                 <p>
                     My approach is straightforward: understand your business,
                     create a clear plan, and build a website that looks
-                    professional, works smoothly, and helps customers take
-                    action.
+                    professional, works smoothly, and makes it easy for customers
+                    to contact you.
                 </p>
 
                 <ul class="about-points">
                     <li>
                         <i class="fa-solid fa-check" aria-hidden="true"></i>
-                        Clear explanations without confusing technical language
+
+                        <span>
+                            Clear explanations without confusing technical language
+                        </span>
                     </li>
 
                     <li>
                         <i class="fa-solid fa-check" aria-hidden="true"></i>
-                        Design decisions based on your business goals
+
+                        <span>
+                            Design decisions based on your business goals
+                        </span>
                     </li>
 
                     <li>
                         <i class="fa-solid fa-check" aria-hidden="true"></i>
-                        A website you can confidently manage after launch
+
+                        <span>
+                            A website you can confidently manage after launch
+                        </span>
                     </li>
                 </ul>
 

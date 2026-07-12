@@ -53,11 +53,9 @@
                 >
                     <div class="faq-answer-inner">
                         <p>
-                            The cost depends on the size of the website,
-                            the features you need, and whether content or
-                            branding work is required. After an initial
-                            conversation, you’ll receive a clear proposal
-                            explaining the scope and price.
+                            Most small-business websites fall between $1,500 and $3,000 CAD. 
+                            The final cost depends on the size of the website, the features you need, and whether content or branding work is required. 
+                            After an initial conversation, you’ll receive a clear proposal outlining the scope, timeline, and price.
                         </p>
                     </div>
                 </div>
@@ -85,8 +83,8 @@
                 >
                     <div class="faq-answer-inner">
                         <p>
-                            Most small-business websites take around four
-                            to eight weeks. The exact timeline depends on
+                            Most small-business websites take around three
+                            to six weeks. The exact timeline depends on
                             the project size, how quickly content is
                             provided, and the feedback process.
                         </p>
@@ -208,9 +206,9 @@
                 >
                     <div class="faq-answer-inner">
                         <p>
-                            Yes. Ongoing maintenance and support are
-                            available for updates, backups, security,
-                            content changes, and general website help.
+                            Yes. Monthly maintenance plans are available and can include updates, 
+                            backups, security monitoring, content changes, 
+                            and general website support.
                         </p>
                     </div>
                 </div>

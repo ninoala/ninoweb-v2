@@ -1,7 +1,7 @@
 <section id="services" class="services section">
     <div class="container">
         <p class="section-eyebrow">Services</p>
-        <h2>Website services built around your business</h2>
+        <h2>What We Can Build for You</h2>
 
         <div class="services-grid">
             <article class="service-card">
@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="service-card-content">
-                    <h3>Custom WordPress Websites</h3>
+                    <h3>Custom WordPress Websites & More</h3>
                     <p>
                         Professional websites built around your business goals,
                         designed to build trust, attract customers, and support your
@@ -26,7 +26,7 @@
                     </ul>
 
                     <a class="service-link" href="#contact">
-                        Discuss This Service
+                        Start a new website
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -58,7 +58,7 @@
                     </ul>
 
                     <a class="service-link" href="#contact">
-                        Discuss This Service
+                        Discuss a redesign or update
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -88,7 +88,7 @@
                     </ul>
 
                     <a class="service-link" href="#contact">
-                        Discuss This Service
+                        Get ongoing website support
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>

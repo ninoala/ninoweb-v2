@@ -15,9 +15,7 @@
             </h1>
 
             <p class="hero-text">
-                Custom WordPress websites designed to make your business
-                look credible, work beautifully on every device, and turn
-                more visitors into inquiries.
+                Custom WordPress websites that help your business stand out online, work beautifully on every device, and include reliable support after launch.
             </p>
 
             <div class="hero-actions">
@@ -45,7 +43,7 @@
             <img
                 src="<?php echo esc_url(
                     get_template_directory_uri() .
-                    '/assets/images/nexter.png'
+                    '/assets/images/heroimage.png'
                 ); ?>"
                 alt="Example of a responsive website displayed on a laptop"
                 loading="eager"
@@ -62,7 +60,7 @@
                 aria-hidden="true"
             ></i>
 
-            <span>Custom for Your Business</span>
+            <span>Custom Designed for Your Business</span>
         </li>
 
         <li>
@@ -71,7 +69,7 @@
                 aria-hidden="true"
             ></i>
 
-            <span>Looks Great on Mobile</span>
+            <span>Look Great on Mobile</span>
         </li>
 
         <li>
@@ -80,7 +78,7 @@
                 aria-hidden="true"
             ></i>
 
-            <span>Search Friendly</span>
+            <span>Search Engine Optimized</span>
         </li>
 
         <li>
