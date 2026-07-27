@@ -7,20 +7,35 @@
 
         <div class="faq-intro">
             <p class="section-eyebrow">
-                Frequently Asked Questions
+                <?php
+                echo esc_html(
+                    ninoweb_text('faq_eyebrow')
+                );
+                ?>
             </p>
 
             <h2 id="faq-heading">
-                A few things you may want to know
+                <?php
+                echo esc_html(
+                    ninoweb_text('faq_heading')
+                );
+                ?>
             </h2>
 
             <p>
-                Clear answers about pricing, timelines, website updates,
-                and what happens after your website launches.
+                <?php
+                echo esc_html(
+                    ninoweb_text('faq_intro')
+                );
+                ?>
             </p>
 
             <a class="faq-contact-link" href="#contact">
-                Have another question?
+                <?php
+                echo esc_html(
+                    ninoweb_text('faq_contact_cta')
+                );
+                ?>
 
                 <i
                     class="fa-solid fa-arrow-right"
@@ -40,8 +55,18 @@
                         aria-expanded="true"
                         aria-controls="faq-answer-1"
                     >
-                        <span>How much does a small-business website cost?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_question_one')
+                            );
+                            ?>
+                        </span>
+
+                        <span
+                            class="faq-icon"
+                            aria-hidden="true"
+                        ></span>
                     </button>
                 </h3>
 
@@ -53,9 +78,11 @@
                 >
                     <div class="faq-answer-inner">
                         <p>
-                            Most small-business websites fall between $1,500 and $3,000 CAD. 
-                            The final cost depends on the size of the website, the features you need, and whether content or branding work is required. 
-                            After an initial conversation, you’ll receive a clear proposal outlining the scope, timeline, and price.
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_answer_one')
+                            );
+                            ?>
                         </p>
                     </div>
                 </div>
@@ -70,8 +97,18 @@
                         aria-expanded="false"
                         aria-controls="faq-answer-2"
                     >
-                        <span>How long does it take to build a website?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_question_two')
+                            );
+                            ?>
+                        </span>
+
+                        <span
+                            class="faq-icon"
+                            aria-hidden="true"
+                        ></span>
                     </button>
                 </h3>
 
@@ -83,10 +120,11 @@
                 >
                     <div class="faq-answer-inner">
                         <p>
-                            Most small-business websites take around three
-                            to six weeks. The exact timeline depends on
-                            the project size, how quickly content is
-                            provided, and the feedback process.
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_answer_two')
+                            );
+                            ?>
                         </p>
                     </div>
                 </div>
@@ -101,8 +139,18 @@
                         aria-expanded="false"
                         aria-controls="faq-answer-3"
                     >
-                        <span>Can you redesign my existing website?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_question_three')
+                            );
+                            ?>
+                        </span>
+
+                        <span
+                            class="faq-icon"
+                            aria-hidden="true"
+                        ></span>
                     </button>
                 </h3>
 
@@ -114,10 +162,11 @@
                 >
                     <div class="faq-answer-inner">
                         <p>
-                            Yes. An existing website can be redesigned to
-                            improve its appearance, mobile experience,
-                            navigation, performance, and overall
-                            effectiveness.
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_answer_three')
+                            );
+                            ?>
                         </p>
                     </div>
                 </div>
@@ -132,8 +181,18 @@
                         aria-expanded="false"
                         aria-controls="faq-answer-4"
                     >
-                        <span>Will my website work properly on mobile?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_question_four')
+                            );
+                            ?>
+                        </span>
+
+                        <span
+                            class="faq-icon"
+                            aria-hidden="true"
+                        ></span>
                     </button>
                 </h3>
 
@@ -145,9 +204,11 @@
                 >
                     <div class="faq-answer-inner">
                         <p>
-                            Yes. Every website is designed to work across
-                            phones, tablets, laptops, and larger desktop
-                            screens.
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_answer_four')
+                            );
+                            ?>
                         </p>
                     </div>
                 </div>
@@ -162,8 +223,18 @@
                         aria-expanded="false"
                         aria-controls="faq-answer-5"
                     >
-                        <span>Will I be able to update the website myself?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_question_five')
+                            );
+                            ?>
+                        </span>
+
+                        <span
+                            class="faq-icon"
+                            aria-hidden="true"
+                        ></span>
                     </button>
                 </h3>
 
@@ -175,10 +246,11 @@
                 >
                     <div class="faq-answer-inner">
                         <p>
-                            Yes. Your WordPress website can be set up so
-                            common content, such as text, images, services,
-                            and contact information, is straightforward to
-                            update.
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_answer_five')
+                            );
+                            ?>
                         </p>
                     </div>
                 </div>
@@ -193,8 +265,18 @@
                         aria-expanded="false"
                         aria-controls="faq-answer-6"
                     >
-                        <span>Do you provide support after launch?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_question_six')
+                            );
+                            ?>
+                        </span>
+
+                        <span
+                            class="faq-icon"
+                            aria-hidden="true"
+                        ></span>
                     </button>
                 </h3>
 
@@ -206,9 +288,11 @@
                 >
                     <div class="faq-answer-inner">
                         <p>
-                            Yes. Monthly maintenance plans are available and can include updates, 
-                            backups, security monitoring, content changes, 
-                            and general website support.
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('faq_answer_six')
+                            );
+                            ?>
                         </p>
                     </div>
                 </div>

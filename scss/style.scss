@@ -5,7 +5,9 @@ Theme Name: NinoWeb
 @use "base/base";
 @use "components/buttons";
 @use "components/contact-dock";
+@use "components/language-popup";
 @use "layout/header";
+@use "layout/page";
 @use "sections/hero";
 @use "sections/services";
 @use "sections/projects";
@@ -13,3 +15,4 @@ Theme Name: NinoWeb
 @use "sections/faq";
 @use "sections/contact";
 @use "layout/footer";
+  

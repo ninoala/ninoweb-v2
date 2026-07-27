@@ -13,6 +13,23 @@ html {
   scroll-padding-top: 90px;
 }
 
+html[lang^="ja"] body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+html[lang^="ja"] h1,
+html[lang^="ja"] h2,
+html[lang^="ja"] h3,
+html[lang^="ja"] h4,
+html[lang^="ja"] p,
+html[lang^="ja"] a,
+html[lang^="ja"] button,
+html[lang^="ja"] input,
+html[lang^="ja"] select,
+html[lang^="ja"] textarea {
+  letter-spacing: normal;
+}
+
 html,
 body {
   overflow-x: hidden;

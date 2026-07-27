@@ -6,16 +6,35 @@
 
         <div class="hero-content">
             <p class="eyebrow">
-                Web Design for Small Businesses
+                <?php
+                echo esc_html(
+                    ninoweb_text('hero_eyebrow')
+                );
+                ?>
             </p>
 
             <h1 id="hero-heading">
-                Professional websites that help businesses
-                <span class="hero-highlight">grow.</span>
+                <?php
+                echo esc_html(
+                    ninoweb_text('hero_heading')
+                );
+                ?>
+
+                <span class="hero-highlight">
+                    <?php
+                    echo esc_html(
+                        ninoweb_text('hero_heading_highlight')
+                    );
+                    ?>
+                </span>
             </h1>
 
             <p class="hero-text">
-                Custom WordPress websites that help your business stand out online, work beautifully on every device, and include reliable support after launch.
+                <?php
+                echo esc_html(
+                    ninoweb_text('hero_description')
+                );
+                ?>
             </p>
 
             <div class="hero-actions">
@@ -23,7 +42,12 @@
                     class="btn btn-primary"
                     href="#contact"
                 >
-                    Get a Free Quote
+                    <?php
+                    echo esc_html(
+                        ninoweb_text('hero_primary_cta')
+                    );
+                    ?>
+
                     <i
                         class="fa-solid fa-arrow-right"
                         aria-hidden="true"
@@ -34,18 +58,28 @@
                     class="btn btn-secondary"
                     href="#projects"
                 >
-                    View Our Work
+                    <?php
+                    echo esc_html(
+                        ninoweb_text('hero_secondary_cta')
+                    );
+                    ?>
                 </a>
             </div>
         </div>
 
         <div class="hero-image">
             <img
-                src="<?php echo esc_url(
-                    get_template_directory_uri() .
-                    '/assets/images/heroimage.png'
-                ); ?>"
-                alt="Example of a responsive website displayed on a laptop"
+                src="<?php
+                    echo esc_url(
+                        get_template_directory_uri() .
+                        '/assets/images/heroimage.png'
+                    );
+                ?>"
+                alt="<?php
+                    echo esc_attr(
+                        ninoweb_text('hero_image_alt')
+                    );
+                ?>"
                 loading="eager"
                 fetchpriority="high"
             >
@@ -60,7 +94,13 @@
                 aria-hidden="true"
             ></i>
 
-            <span>Custom Designed for Your Business</span>
+            <span>
+                <?php
+                echo esc_html(
+                    ninoweb_text('hero_feature_custom')
+                );
+                ?>
+            </span>
         </li>
 
         <li>
@@ -69,7 +109,13 @@
                 aria-hidden="true"
             ></i>
 
-            <span>Look Great on Mobile</span>
+            <span>
+                <?php
+                echo esc_html(
+                    ninoweb_text('hero_feature_mobile')
+                );
+                ?>
+            </span>
         </li>
 
         <li>
@@ -78,7 +124,13 @@
                 aria-hidden="true"
             ></i>
 
-            <span>Search Engine Optimized</span>
+            <span>
+                <?php
+                echo esc_html(
+                    ninoweb_text('hero_feature_seo')
+                );
+                ?>
+            </span>
         </li>
 
         <li>
@@ -87,7 +139,13 @@
                 aria-hidden="true"
             ></i>
 
-            <span>Support After Launch</span>
+            <span>
+                <?php
+                echo esc_html(
+                    ninoweb_text('hero_feature_support')
+                );
+                ?>
+            </span>
         </li>
     </ul>
 </section>

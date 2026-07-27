@@ -1,0 +1,44 @@
+.page-main {
+    background: var(--color-bg);
+}
+
+.page-hero {
+    padding: 7rem 0 2rem;
+}
+
+.page-title {
+    max-width: 760px;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.container-narrow {
+    max-width: 100%;
+}
+
+.page-content {
+    padding-top: 2rem;
+}
+
+.page-content h2,
+.page-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.page-content p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+}
+
+.page-content a {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding-top: 6rem;
+    }
+}

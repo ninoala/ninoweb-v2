@@ -1,26 +1,36 @@
 <?php
+
 $line_url = 'https://line.me/ti/p/VEZrRLxLJG';
 
 $whatsapp_message = rawurlencode(
-    "Hi! I'm interested in a website for my business."
+    ninoweb_text('contact_whatsapp_message')
 );
 
 $whatsapp_url = 'https://wa.me/17788587815?text=' .
     $whatsapp_message;
 
-$instagram_url = 'https://www.instagram.com/ninoweb.jp/';
+$instagram_url = 'https://www.instagram.com/ninowebstudio/';
+
 ?>
 
 <nav
     class="contact-dock"
-    aria-label="Quick contact"
+    aria-label="<?php
+        echo esc_attr(
+            ninoweb_text('contact_channels_label')
+        );
+    ?>"
 >
     <a
         class="contact-dock-link contact-dock-link--line"
         href="<?php echo esc_url($line_url); ?>"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Message NinoWeb on LINE"
+        aria-label="<?php
+            echo esc_attr(
+                ninoweb_text('contact_line_label')
+            );
+        ?>"
     >
         <span class="contact-dock-icon">
             <i
@@ -29,7 +39,9 @@ $instagram_url = 'https://www.instagram.com/ninoweb.jp/';
             ></i>
         </span>
 
-        <span class="contact-dock-label">LINE</span>
+        <span class="contact-dock-label">
+            LINE
+        </span>
     </a>
 
     <a
@@ -37,7 +49,11 @@ $instagram_url = 'https://www.instagram.com/ninoweb.jp/';
         href="<?php echo esc_url($whatsapp_url); ?>"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Message NinoWeb on WhatsApp"
+        aria-label="<?php
+            echo esc_attr(
+                ninoweb_text('contact_whatsapp_label')
+            );
+        ?>"
     >
         <span class="contact-dock-icon">
             <i
@@ -46,7 +62,9 @@ $instagram_url = 'https://www.instagram.com/ninoweb.jp/';
             ></i>
         </span>
 
-        <span class="contact-dock-label">WhatsApp</span>
+        <span class="contact-dock-label">
+            WhatsApp
+        </span>
     </a>
 
     <a
@@ -54,7 +72,11 @@ $instagram_url = 'https://www.instagram.com/ninoweb.jp/';
         href="<?php echo esc_url($instagram_url); ?>"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Visit NinoWeb on Instagram"
+        aria-label="<?php
+            echo esc_attr(
+                ninoweb_text('contact_instagram_label')
+            );
+        ?>"
     >
         <span class="contact-dock-icon">
             <i
@@ -63,6 +85,8 @@ $instagram_url = 'https://www.instagram.com/ninoweb.jp/';
             ></i>
         </span>
 
-        <span class="contact-dock-label">Instagram</span>
+        <span class="contact-dock-label">
+            Instagram
+        </span>
     </a>
 </nav>

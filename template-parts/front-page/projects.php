@@ -1,72 +1,206 @@
 <section id="projects" class="projects section">
     <div class="container">
-        <p class="section-eyebrow">Selected Work</p>
-        <h2>A look at our work</h2>
+        <p class="section-eyebrow">
+            <?php
+            echo esc_html(
+                ninoweb_text('projects_eyebrow')
+            );
+            ?>
+        </p>
+
+        <h2>
+            <?php
+            echo esc_html(
+                ninoweb_text('projects_heading')
+            );
+            ?>
+        </h2>
+
         <p class="projects-intro">
-            A selection of projects focused on clear
-            design, mobile usability, and real business goals.
+            <?php
+            echo esc_html(
+                ninoweb_text('projects_intro')
+            );
+            ?>
         </p>
 
         <div class="projects-grid">
+
+            <!-- CarDoctor -->
+
             <article class="project-card project-card-large">
                 <div class="project-image">
                     <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri() . '/assets/images/cardoctor.png'
-                        ); ?>"
-                        alt="CarDoctor website screenshot"
+                        src="<?php
+                            echo esc_url(
+                                get_template_directory_uri() .
+                                '/assets/images/cardoctor.png'
+                            );
+                        ?>"
+                        alt="<?php
+                            echo esc_attr(
+                                ninoweb_text('project_cardoctor_alt')
+                            );
+                        ?>"
+                        loading="lazy"
+                        decoding="async"
                     >
                 </div>
 
                 <div class="project-content">
-                    <p class="project-label">Car Repair Shop</p>
-                    <h3>CarDoctor</h3>
-                    <p class="project-description">
-                        Custom WordPress website for an automotive service business.
+                    <p class="project-label">
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('project_cardoctor_label')
+                        );
+                        ?>
                     </p>
+
+                    <h3>CarDoctor</h3>
+
+                    <p class="project-description">
+                        <?php
+                        echo esc_html(
+                            ninoweb_text(
+                                'project_cardoctor_description'
+                            )
+                        );
+                        ?>
+                    </p>
+
                     <div class="project-footer">
                         <div class="project-tags">
-                            <span>Custom Design</span>
-                            <span>Service Showcase</span>
-                            <span>Mobile Friendly</span>
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_cardoctor_tag_one'
+                                    )
+                                );
+                                ?>
+                            </span>
+
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_cardoctor_tag_two'
+                                    )
+                                );
+                                ?>
+                            </span>
+
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_cardoctor_tag_three'
+                                    )
+                                );
+                                ?>
+                            </span>
                         </div>
+
                         <a
                             class="project-link"
                             href="https://cardoctor.jp"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            View Project
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('project_view')
+                            );
+                            ?>
+
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
                         </a>
                     </div>
                 </div>
             </article>
 
+            <!-- Nexter -->
+
             <article class="project-card project-card-large">
                 <div class="project-image">
                     <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri() . '/assets/images/nexxter.png'
-                        ); ?>"
-                        alt="Nexter real estate website screenshot"
+                        src="<?php
+                            echo esc_url(
+                                get_template_directory_uri() .
+                                '/assets/images/nexxter.png'
+                            );
+                        ?>"
+                        alt="<?php
+                            echo esc_attr(
+                                ninoweb_text('project_nexter_alt')
+                            );
+                        ?>"
+                        loading="lazy"
+                        decoding="async"
                     >
                 </div>
 
                 <div class="project-content">
-                    <p class="project-label">Luxury Real Estate</p>
+                    <p class="project-label">
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('project_nexter_label')
+                        );
+                        ?>
+                    </p>
 
-                    <h3>Real Estate Website (Nexter)</h3>
+                    <h3>
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('project_nexter_title')
+                        );
+                        ?>
+                    </h3>
 
                     <p class="project-description">
-                        Responsive layout for property listings, agent branding, and lead generation.
+                        <?php
+                        echo esc_html(
+                            ninoweb_text(
+                                'project_nexter_description'
+                            )
+                        );
+                        ?>
                     </p>
 
                     <div class="project-footer">
                         <div class="project-tags">
-                            <span>Property Listings</span>
-                            <span>Lead Generation</span>
-                            <span>Easy Navigation</span>
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_nexter_tag_one'
+                                    )
+                                );
+                                ?>
+                            </span>
+
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_nexter_tag_two'
+                                    )
+                                );
+                                ?>
+                            </span>
+
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_nexter_tag_three'
+                                    )
+                                );
+                                ?>
+                            </span>
                         </div>
 
                         <a
@@ -75,37 +209,94 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            View Project
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('project_view')
+                            );
+                            ?>
+
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
                         </a>
                     </div>
                 </div>
             </article>
 
+            <!-- Natours -->
+
             <article class="project-card">
                 <div class="project-image">
                     <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri() . '/assets/images/natours.png'
-                        ); ?>"
-                        alt="Natours travel website screenshot"
+                        src="<?php
+                            echo esc_url(
+                                get_template_directory_uri() .
+                                '/assets/images/natours.png'
+                            );
+                        ?>"
+                        alt="<?php
+                            echo esc_attr(
+                                ninoweb_text('project_natours_alt')
+                            );
+                        ?>"
+                        loading="lazy"
+                        decoding="async"
                     >
                 </div>
 
                 <div class="project-content">
-                    <p class="project-label">Adventure Travel Company</p>
+                    <p class="project-label">
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('project_natours_label')
+                        );
+                        ?>
+                    </p>
 
                     <h3>Natours</h3>
 
                     <p class="project-description">
-                        Travel landing page concept with strong visuals and clean, responsive sections.
+                        <?php
+                        echo esc_html(
+                            ninoweb_text(
+                                'project_natours_description'
+                            )
+                        );
+                        ?>
                     </p>
 
                     <div class="project-footer">
                         <div class="project-tags">
-                            <span>Engaging Design</span>
-                            <span>Tour Showcase</span>
-                            <span>Mobile Friendly</span>
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_natours_tag_one'
+                                    )
+                                );
+                                ?>
+                            </span>
+
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_natours_tag_two'
+                                    )
+                                );
+                                ?>
+                            </span>
+
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_cardoctor_tag_three'
+                                    )
+                                );
+                                ?>
+                            </span>
                         </div>
 
                         <a
@@ -114,37 +305,94 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            View Project
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('project_view')
+                            );
+                            ?>
+
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
                         </a>
                     </div>
                 </div>
             </article>
 
+            <!-- YNino -->
+
             <article class="project-card">
                 <div class="project-image">
                     <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri() . '/assets/images/ynino.png'
-                        ); ?>"
-                        alt="YNino developer portfolio screenshot"
+                        src="<?php
+                            echo esc_url(
+                                get_template_directory_uri() .
+                                '/assets/images/ynino.png'
+                            );
+                        ?>"
+                        alt="<?php
+                            echo esc_attr(
+                                ninoweb_text('project_ynino_alt')
+                            );
+                        ?>"
+                        loading="lazy"
+                        decoding="async"
                     >
                 </div>
 
                 <div class="project-content">
-                    <p class="project-label">React Portfolio</p>
+                    <p class="project-label">
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('project_ynino_label')
+                        );
+                        ?>
+                    </p>
 
                     <h3>ynino.dev</h3>
 
                     <p class="project-description">
-                        A personal website created to showcase development work and experience.
+                        <?php
+                        echo esc_html(
+                            ninoweb_text(
+                                'project_ynino_description'
+                            )
+                        );
+                        ?>
                     </p>
 
                     <div class="project-footer">
                         <div class="project-tags">
-                            <span>Project Showcase</span>
-                            <span>Interactive Design</span>
-                            <span>Clear Navigation</span>
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_ynino_tag_one'
+                                    )
+                                );
+                                ?>
+                            </span>
+
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_ynino_tag_two'
+                                    )
+                                );
+                                ?>
+                            </span>
+
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_ynino_tag_three'
+                                    )
+                                );
+                                ?>
+                            </span>
                         </div>
 
                         <a
@@ -153,37 +401,100 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            View Project
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('project_view')
+                            );
+                            ?>
+
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
                         </a>
                     </div>
                 </div>
             </article>
 
+            <!-- Trillo -->
+
             <article class="project-card">
                 <div class="project-image">
                     <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri() . '/assets/images/trillo.png'
-                        ); ?>"
-                        alt="Trillo booking application screenshot"
+                        src="<?php
+                            echo esc_url(
+                                get_template_directory_uri() .
+                                '/assets/images/trillo.png'
+                            );
+                        ?>"
+                        alt="<?php
+                            echo esc_attr(
+                                ninoweb_text('project_trillo_alt')
+                            );
+                        ?>"
+                        loading="lazy"
+                        decoding="async"
                     >
                 </div>
 
                 <div class="project-content">
-                    <p class="project-label">Hotel Booking Platform</p>
+                    <p class="project-label">
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('project_trillo_label')
+                        );
+                        ?>
+                    </p>
 
-                    <h3>Trillo Booking App</h3>
+                    <h3>
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('project_trillo_title')
+                        );
+                        ?>
+                    </h3>
 
                     <p class="project-description">
-                        Responsive travel booking interface focused on clean navigation and flexible layouts.
+                        <?php
+                        echo esc_html(
+                            ninoweb_text(
+                                'project_trillo_description'
+                            )
+                        );
+                        ?>
                     </p>
 
                     <div class="project-footer">
                         <div class="project-tags">
-                            <span>Booking Experience</span>
-                            <span>Search & Filters</span>
-                            <span>Mobile Friendly</span>
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_trillo_tag_one'
+                                    )
+                                );
+                                ?>
+                            </span>
+
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_trillo_tag_two'
+                                    )
+                                );
+                                ?>
+                            </span>
+
+                            <span>
+                                <?php
+                                echo esc_html(
+                                    ninoweb_text(
+                                        'project_cardoctor_tag_three'
+                                    )
+                                );
+                                ?>
+                            </span>
                         </div>
 
                         <a
@@ -192,8 +503,16 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            View Project
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('project_view')
+                            );
+                            ?>
+
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
                         </a>
                     </div>
                 </div>

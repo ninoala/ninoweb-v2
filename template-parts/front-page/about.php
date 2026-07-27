@@ -2,14 +2,28 @@
     <div class="container">
 
         <div class="about-heading">
-            <p class="section-eyebrow">About NinoWeb</p>
+            <p class="section-eyebrow">
+                <?php
+                echo esc_html(
+                    ninoweb_text('about_eyebrow')
+                );
+                ?>
+            </p>
 
-            <h2>Direct, practical web design for small businesses</h2>
+            <h2>
+                <?php
+                echo esc_html(
+                    ninoweb_text('about_heading')
+                );
+                ?>
+            </h2>
 
             <p class="about-intro">
-                Work directly with the person designing and building your
-                website, with clear communication from the first conversation
-                through launch and beyond.
+                <?php
+                echo esc_html(
+                    ninoweb_text('about_intro')
+                );
+                ?>
             </p>
         </div>
 
@@ -20,7 +34,11 @@
                     <h3>Nino<span>Web</span></h3>
 
                     <p>
-                        Independent web design and development
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('about_brand_description')
+                        );
+                        ?>
                     </p>
                 </div>
 
@@ -31,7 +49,15 @@
                             aria-hidden="true"
                         ></i>
 
-                        <span>Direct Communication</span>
+                        <span>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'about_service_communication'
+                                )
+                            );
+                            ?>
+                        </span>
                     </li>
 
                     <li>
@@ -40,7 +66,15 @@
                             aria-hidden="true"
                         ></i>
 
-                        <span>Clear Project Process</span>
+                        <span>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'about_service_process'
+                                )
+                            );
+                            ?>
+                        </span>
                     </li>
 
                     <li>
@@ -49,7 +83,15 @@
                             aria-hidden="true"
                         ></i>
 
-                        <span>Mobile-Friendly Design</span>
+                        <span>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'about_service_mobile'
+                                )
+                            );
+                            ?>
+                        </span>
                     </li>
 
                     <li>
@@ -58,7 +100,15 @@
                             aria-hidden="true"
                         ></i>
 
-                        <span>Support After Launch</span>
+                        <span>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'about_service_support'
+                                )
+                            );
+                            ?>
+                        </span>
                     </li>
                 </ul>
 
@@ -71,26 +121,50 @@
                     </div>
 
                     <div>
-                        <strong>Ottawa, Ontario</strong>
+                        <strong>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('about_location')
+                            );
+                            ?>
+                        </strong>
 
                         <p>
-                            Available for projects across Canada and remotely
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'about_location_description'
+                                )
+                            );
+                            ?>
                         </p>
                     </div>
                 </div>
             </div>
 
             <div class="about-content">
-                <p class="about-kicker">Meet Your Developer</p>
+                <p class="about-kicker">
+                    <?php
+                    echo esc_html(
+                        ninoweb_text('about_kicker')
+                    );
+                    ?>
+                </p>
 
                 <div class="about-person">
                     <div class="about-photo">
                         <img
-                            src="<?php echo esc_url(
-                                get_template_directory_uri() .
-                                '/assets/images/yegor-headshot.png'
-                            ); ?>"
-                            alt="Yegor Nino, web designer and developer behind NinoWeb"
+                            src="<?php
+                                echo esc_url(
+                                    get_template_directory_uri() .
+                                    '/assets/images/yegor-headshot.png'
+                                );
+                            ?>"
+                            alt="<?php
+                                echo esc_attr(
+                                    ninoweb_text('about_photo_alt')
+                                );
+                            ?>"
                             width="180"
                             height="180"
                             loading="lazy"
@@ -99,10 +173,24 @@
                     </div>
 
                     <div class="about-person-heading">
-                        <h3>Hi, I’m Yegor — the person behind NinoWeb.</h3>
+                        <h3>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'about_person_heading'
+                                )
+                            );
+                            ?>
+                        </h3>
 
                         <p>
-                            Independent web designer and developer based in Ottawa.
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'about_person_description'
+                                )
+                            );
+                            ?>
                         </p>
                     </div>
                 </div>
@@ -110,46 +198,74 @@
                 <div class="about-line"></div>
 
                 <p>
-                    I help small businesses build modern, professional websites
-                    without the complexity of working with a large agency. You
-                    communicate directly with me throughout the entire project.
+                    <?php
+                    echo esc_html(
+                        ninoweb_text('about_paragraph_one')
+                    );
+                    ?>
                 </p>
 
                 <p>
-                    My approach is straightforward: understand your business,
-                    create a clear plan, and build a website that looks
-                    professional, works smoothly, and makes it easy for customers
-                    to contact you.
+                    <?php
+                    echo esc_html(
+                        ninoweb_text('about_paragraph_two')
+                    );
+                    ?>
                 </p>
 
                 <ul class="about-points">
                     <li>
-                        <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        <i
+                            class="fa-solid fa-check"
+                            aria-hidden="true"
+                        ></i>
 
                         <span>
-                            Clear explanations without confusing technical language
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('about_point_one')
+                            );
+                            ?>
                         </span>
                     </li>
 
                     <li>
-                        <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        <i
+                            class="fa-solid fa-check"
+                            aria-hidden="true"
+                        ></i>
 
                         <span>
-                            Design decisions based on your business goals
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('about_point_two')
+                            );
+                            ?>
                         </span>
                     </li>
 
                     <li>
-                        <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        <i
+                            class="fa-solid fa-check"
+                            aria-hidden="true"
+                        ></i>
 
                         <span>
-                            A website you can confidently manage after launch
+                            <?php
+                            echo esc_html(
+                                ninoweb_text('about_point_three')
+                            );
+                            ?>
                         </span>
                     </li>
                 </ul>
 
                 <a class="about-link" href="#contact">
-                    Tell me about your project
+                    <?php
+                    echo esc_html(
+                        ninoweb_text('about_cta')
+                    );
+                    ?>
 
                     <i
                         class="fa-solid fa-arrow-right"

@@ -1,65 +1,173 @@
 <section id="services" class="services section">
     <div class="container">
-        <p class="section-eyebrow">Services</p>
-        <h2>What We Can Build for You</h2>
+        <p class="section-eyebrow">
+            <?php echo esc_html(ninoweb_text('services')); ?>
+        </p>
+
+        <h2>
+            <?php echo esc_html(ninoweb_text('services_heading')); ?>
+        </h2>
 
         <div class="services-grid">
+
             <article class="service-card">
                 <div class="service-card-top">
                     <span class="service-number">01</span>
+
                     <div class="service-icon">
-                        <i class="fa-solid fa-laptop-code"></i>
+                        <i
+                            class="fa-solid fa-laptop-code"
+                            aria-hidden="true"
+                        ></i>
                     </div>
                 </div>
 
                 <div class="service-card-content">
-                    <h3>Custom WordPress Websites & More</h3>
+                    <h3>
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('service_website_title')
+                        );
+                        ?>
+                    </h3>
+
                     <p>
-                        Professional websites built around your business goals,
-                        designed to build trust, attract customers, and support your
-                        growth online.
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('service_website_description')
+                        );
+                        ?>
                     </p>
+
                     <ul class="service-features">
-                        <li>Custom design for your business</li>
-                        <li>Mobile-friendly on every screen</li>
-                        <li>Simple for you to update</li>
+                        <li>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'service_website_feature_one'
+                                )
+                            );
+                            ?>
+                        </li>
+
+                        <li>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'service_website_feature_two'
+                                )
+                            );
+                            ?>
+                        </li>
+
+                        <li>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'service_website_feature_three'
+                                )
+                            );
+                            ?>
+                        </li>
                     </ul>
 
                     <a class="service-link" href="#contact">
-                        Start a new website
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('service_website_cta')
+                        );
+                        ?>
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                        ></i>
                     </a>
                 </div>
             </article>
 
             <article class="service-card service-card-featured">
                 <div class="service-card-top">
-                    <span class="service-badge">Best for Existing Sites</span>
+                    <span class="service-badge">
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('service_redesign_badge')
+                        );
+                        ?>
+                    </span>
+
                     <span class="service-number">02</span>
 
                     <div class="service-icon">
-                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <i
+                            class="fa-solid fa-arrows-rotate"
+                            aria-hidden="true"
+                        ></i>
                     </div>
                 </div>
 
                 <div class="service-card-content">
-                    <h3>Website Redesigns &amp; Optimization</h3>
+                    <h3>
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('service_redesign_title')
+                        );
+                        ?>
+                    </h3>
 
                     <p>
-                        Transform an outdated website into a modern, responsive
-                        experience that performs better and represents your business
-                        professionally.
+                        <?php
+                        echo esc_html(
+                            ninoweb_text(
+                                'service_redesign_description'
+                            )
+                        );
+                        ?>
                     </p>
 
                     <ul class="service-features">
-                        <li>Modern, professional appearance</li>
-                        <li>Clearer and easier navigation</li>
-                        <li>Improved speed and performance</li>
+                        <li>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'service_redesign_feature_one'
+                                )
+                            );
+                            ?>
+                        </li>
+
+                        <li>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'service_redesign_feature_two'
+                                )
+                            );
+                            ?>
+                        </li>
+
+                        <li>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'service_redesign_feature_three'
+                                )
+                            );
+                            ?>
+                        </li>
                     </ul>
 
                     <a class="service-link" href="#contact">
-                        Discuss a redesign or update
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('service_redesign_cta')
+                        );
+                        ?>
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                        ></i>
                     </a>
                 </div>
             </article>
@@ -69,30 +177,79 @@
                     <span class="service-number">03</span>
 
                     <div class="service-icon">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <i
+                            class="fa-solid fa-screwdriver-wrench"
+                            aria-hidden="true"
+                        ></i>
                     </div>
                 </div>
 
                 <div class="service-card-content">
-                    <h3>Maintenance &amp; Support</h3>
+                    <h3>
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('service_support_title')
+                        );
+                        ?>
+                    </h3>
 
                     <p>
-                        Reliable ongoing assistance to keep your website updated,
-                        secure, functional, and ready to support your customers.
+                        <?php
+                        echo esc_html(
+                            ninoweb_text(
+                                'service_support_description'
+                            )
+                        );
+                        ?>
                     </p>
 
                     <ul class="service-features">
-                        <li>Regular website updates</li>
-                        <li>Security checks and backups</li>
-                        <li>Reliable help when needed</li>
+                        <li>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'service_support_feature_one'
+                                )
+                            );
+                            ?>
+                        </li>
+
+                        <li>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'service_support_feature_two'
+                                )
+                            );
+                            ?>
+                        </li>
+
+                        <li>
+                            <?php
+                            echo esc_html(
+                                ninoweb_text(
+                                    'service_support_feature_three'
+                                )
+                            );
+                            ?>
+                        </li>
                     </ul>
 
                     <a class="service-link" href="#contact">
-                        Get ongoing website support
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <?php
+                        echo esc_html(
+                            ninoweb_text('service_support_cta')
+                        );
+                        ?>
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                        ></i>
                     </a>
                 </div>
             </article>
+
         </div>
     </div>
 </section>
