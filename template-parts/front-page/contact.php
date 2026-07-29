@@ -61,20 +61,14 @@ $instagram_url = 'https://www.instagram.com/ninowebstudio';
                     ?>"
                 >
                     <span class="contact-channel-icon">
-                        <i
-                            class="fa-brands fa-line"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'line', 'brands', '' ); ?>
                     </span>
 
                     <span class="contact-channel-copy">
                         <strong>LINE</strong>
                     </span>
 
-                    <i
-                        class="fa-solid fa-arrow-up-right-from-square contact-channel-arrow"
-                        aria-hidden="true"
-                    ></i>
+                    <?php echo ninoweb_icon( 'arrow-up-right-from-square', 'solid', 'contact-channel-arrow' ); ?>
                 </a>
 
                 <a
@@ -89,20 +83,14 @@ $instagram_url = 'https://www.instagram.com/ninowebstudio';
                     ?>"
                 >
                     <span class="contact-channel-icon">
-                        <i
-                            class="fa-brands fa-whatsapp"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'whatsapp', 'brands', '' ); ?>
                     </span>
 
                     <span class="contact-channel-copy">
                         <strong>WhatsApp</strong>
                     </span>
 
-                    <i
-                        class="fa-solid fa-arrow-up-right-from-square contact-channel-arrow"
-                        aria-hidden="true"
-                    ></i>
+                    <?php echo ninoweb_icon( 'arrow-up-right-from-square', 'solid', 'contact-channel-arrow' ); ?>
                 </a>
 
                 <a
@@ -117,30 +105,21 @@ $instagram_url = 'https://www.instagram.com/ninowebstudio';
                     ?>"
                 >
                     <span class="contact-channel-icon">
-                        <i
-                            class="fa-brands fa-instagram"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'instagram', 'brands', '' ); ?>
                     </span>
 
                     <span class="contact-channel-copy">
                         <strong>Instagram</strong>
                     </span>
 
-                    <i
-                        class="fa-solid fa-arrow-up-right-from-square contact-channel-arrow"
-                        aria-hidden="true"
-                    ></i>
+                    <?php echo ninoweb_icon( 'arrow-up-right-from-square', 'solid', 'contact-channel-arrow' ); ?>
                 </a>
             </div>
 
             <ul class="contact-benefits">
                 <li>
                     <span class="contact-benefit-icon">
-                        <i
-                            class="fa-solid fa-comments"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'comments', 'solid', '' ); ?>
                     </span>
 
                     <div>
@@ -168,10 +147,7 @@ $instagram_url = 'https://www.instagram.com/ninowebstudio';
 
                 <li>
                     <span class="contact-benefit-icon">
-                        <i
-                            class="fa-solid fa-file-lines"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'file-lines', 'solid', '' ); ?>
                     </span>
 
                     <div>
@@ -199,10 +175,7 @@ $instagram_url = 'https://www.instagram.com/ninowebstudio';
 
                 <li>
                     <span class="contact-benefit-icon">
-                        <i
-                            class="fa-solid fa-clock"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'clock', 'solid', '' ); ?>
                     </span>
 
                     <div>
@@ -417,10 +390,7 @@ $instagram_url = 'https://www.instagram.com/ninowebstudio';
                 );
                 ?>
 
-                <i
-                    class="fa-solid fa-arrow-right"
-                    aria-hidden="true"
-                ></i>
+                <?php echo ninoweb_icon( 'arrow-right', 'solid', '' ); ?>
             </button>
 
             <p class="contact-privacy">

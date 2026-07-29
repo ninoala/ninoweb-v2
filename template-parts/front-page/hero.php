@@ -1,3 +1,29 @@
+<?php
+$hero_480 = get_theme_file_uri(
+    '/assets/images/heroimage-480.webp'
+);
+
+$hero_768 = get_theme_file_uri(
+    '/assets/images/heroimage-768.webp'
+);
+
+$hero_960 = get_theme_file_uri(
+    '/assets/images/heroimage-960.webp'
+);
+
+$hero_1536 = get_theme_file_uri(
+    '/assets/images/heroimage-1536.webp'
+);
+
+$hero_srcset = sprintf(
+    '%1$s 480w, %2$s 768w, %3$s 960w, %4$s 1536w',
+    $hero_480,
+    $hero_768,
+    $hero_960,
+    $hero_1536
+);
+?>
+
 <section
     class="hero"
     aria-labelledby="hero-heading"
@@ -48,10 +74,7 @@
                     );
                     ?>
 
-                    <i
-                        class="fa-solid fa-arrow-right"
-                        aria-hidden="true"
-                    ></i>
+                    <?php echo ninoweb_icon( 'arrow-right', 'solid', '' ); ?>
                 </a>
 
                 <a
@@ -69,19 +92,17 @@
 
         <div class="hero-image">
             <img
-                src="<?php
-                    echo esc_url(
-                        get_template_directory_uri() .
-                        '/assets/images/heroimage.png'
-                    );
-                ?>"
-                alt="<?php
-                    echo esc_attr(
-                        ninoweb_text('hero_image_alt')
-                    );
-                ?>"
+                src="<?php echo esc_url($hero_1536); ?>"
+                srcset="<?php echo esc_attr($hero_srcset); ?>"
+                sizes="(max-width: 767px) 92vw, 75vw"
+                width="1536"
+                height="1024"
+                alt="<?php echo esc_attr(
+                    ninoweb_text('hero_image_alt')
+                ); ?>"
                 loading="eager"
                 fetchpriority="high"
+                decoding="async"
             >
         </div>
 
@@ -89,10 +110,7 @@
 
     <ul class="hero-services">
         <li>
-            <i
-                class="fa-solid fa-bezier-curve"
-                aria-hidden="true"
-            ></i>
+            <?php echo ninoweb_icon( 'bezier-curve', 'solid', '' ); ?>
 
             <span>
                 <?php
@@ -104,10 +122,7 @@
         </li>
 
         <li>
-            <i
-                class="fa-solid fa-mobile-screen-button"
-                aria-hidden="true"
-            ></i>
+            <?php echo ninoweb_icon( 'mobile-screen-button', 'solid', '' ); ?>
 
             <span>
                 <?php
@@ -119,10 +134,7 @@
         </li>
 
         <li>
-            <i
-                class="fa-solid fa-magnifying-glass"
-                aria-hidden="true"
-            ></i>
+            <?php echo ninoweb_icon( 'magnifying-glass', 'solid', '' ); ?>
 
             <span>
                 <?php
@@ -134,10 +146,7 @@
         </li>
 
         <li>
-            <i
-                class="fa-solid fa-screwdriver-wrench"
-                aria-hidden="true"
-            ></i>
+            <?php echo ninoweb_icon( 'screwdriver-wrench', 'solid', '' ); ?>
 
             <span>
                 <?php

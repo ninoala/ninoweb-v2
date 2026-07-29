@@ -26,7 +26,7 @@
   border-radius: 24px;
   box-shadow: 0 14px 45px rgba(6, 27, 53, 0.07);
 
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .service-card:hover {
@@ -89,7 +89,7 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.045em;
-  background: #ff8a00;
+  background: #c54800;
   border-radius: 999px;
 }
 
@@ -106,7 +106,7 @@
   width: 58px;
   height: 58px;
 
-  color: #ff8a00;
+  color: #c54800;
   font-size: 1.35rem;
 
   background: #ffffff;
@@ -186,14 +186,14 @@
   transition: color 0.25s ease, gap 0.25s ease;
 }
 
-.service-link i {
-  color: #ff8a00;
+.service-link .ninoweb-icon {
+  color: #c54800;
   font-size: 0.76rem;
 }
 
 .service-link:hover {
   gap: 13px;
-  color: #ff8a00;
+  color: #c54800;
 }
 
 @media (max-width: 900px) {

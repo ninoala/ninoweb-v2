@@ -15,10 +15,7 @@
                     <span class="service-number">01</span>
 
                     <div class="service-icon">
-                        <i
-                            class="fa-solid fa-laptop-code"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'laptop-code', 'solid', '' ); ?>
                     </div>
                 </div>
 
@@ -78,10 +75,7 @@
                         );
                         ?>
 
-                        <i
-                            class="fa-solid fa-arrow-right"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'arrow-right', 'solid', '' ); ?>
                     </a>
                 </div>
             </article>
@@ -99,10 +93,7 @@
                     <span class="service-number">02</span>
 
                     <div class="service-icon">
-                        <i
-                            class="fa-solid fa-arrows-rotate"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'arrows-rotate', 'solid', '' ); ?>
                     </div>
                 </div>
 
@@ -164,10 +155,7 @@
                         );
                         ?>
 
-                        <i
-                            class="fa-solid fa-arrow-right"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'arrow-right', 'solid', '' ); ?>
                     </a>
                 </div>
             </article>
@@ -177,10 +165,7 @@
                     <span class="service-number">03</span>
 
                     <div class="service-icon">
-                        <i
-                            class="fa-solid fa-screwdriver-wrench"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'screwdriver-wrench', 'solid', '' ); ?>
                     </div>
                 </div>
 
@@ -242,10 +227,7 @@
                         );
                         ?>
 
-                        <i
-                            class="fa-solid fa-arrow-right"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'arrow-right', 'solid', '' ); ?>
                     </a>
                 </div>
             </article>

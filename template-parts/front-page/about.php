@@ -44,10 +44,7 @@
 
                 <ul class="about-services">
                     <li>
-                        <i
-                            class="fa-solid fa-comments"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'comments', 'solid', '' ); ?>
 
                         <span>
                             <?php
@@ -61,10 +58,7 @@
                     </li>
 
                     <li>
-                        <i
-                            class="fa-solid fa-list-check"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'list-check', 'solid', '' ); ?>
 
                         <span>
                             <?php
@@ -78,10 +72,7 @@
                     </li>
 
                     <li>
-                        <i
-                            class="fa-solid fa-mobile-screen-button"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'mobile-screen-button', 'solid', '' ); ?>
 
                         <span>
                             <?php
@@ -95,10 +86,7 @@
                     </li>
 
                     <li>
-                        <i
-                            class="fa-solid fa-headset"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'headset', 'solid', '' ); ?>
 
                         <span>
                             <?php
@@ -114,10 +102,7 @@
 
                 <div class="about-location">
                     <div class="about-location-icon">
-                        <i
-                            class="fa-solid fa-location-dot"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'location-dot', 'solid', '' ); ?>
                     </div>
 
                     <div>
@@ -157,7 +142,7 @@
                             src="<?php
                                 echo esc_url(
                                     get_template_directory_uri() .
-                                    '/assets/images/yegor-headshot.png'
+                                    '/assets/images/yegor-headshot.webp'
                                 );
                             ?>"
                             alt="<?php
@@ -215,10 +200,7 @@
 
                 <ul class="about-points">
                     <li>
-                        <i
-                            class="fa-solid fa-check"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'check', 'solid', '' ); ?>
 
                         <span>
                             <?php
@@ -230,10 +212,7 @@
                     </li>
 
                     <li>
-                        <i
-                            class="fa-solid fa-check"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'check', 'solid', '' ); ?>
 
                         <span>
                             <?php
@@ -245,10 +224,7 @@
                     </li>
 
                     <li>
-                        <i
-                            class="fa-solid fa-check"
-                            aria-hidden="true"
-                        ></i>
+                        <?php echo ninoweb_icon( 'check', 'solid', '' ); ?>
 
                         <span>
                             <?php
@@ -267,10 +243,7 @@
                     );
                     ?>
 
-                    <i
-                        class="fa-solid fa-arrow-right"
-                        aria-hidden="true"
-                    ></i>
+                    <?php echo ninoweb_icon( 'arrow-right', 'solid', '' ); ?>
                 </a>
             </div>
 

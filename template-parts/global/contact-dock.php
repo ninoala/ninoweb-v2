@@ -33,10 +33,7 @@ $instagram_url = 'https://www.instagram.com/ninowebstudio/';
         ?>"
     >
         <span class="contact-dock-icon">
-            <i
-                class="fa-brands fa-line"
-                aria-hidden="true"
-            ></i>
+            <?php echo ninoweb_icon( 'line', 'brands', '' ); ?>
         </span>
 
         <span class="contact-dock-label">
@@ -56,10 +53,7 @@ $instagram_url = 'https://www.instagram.com/ninowebstudio/';
         ?>"
     >
         <span class="contact-dock-icon">
-            <i
-                class="fa-brands fa-whatsapp"
-                aria-hidden="true"
-            ></i>
+            <?php echo ninoweb_icon( 'whatsapp', 'brands', '' ); ?>
         </span>
 
         <span class="contact-dock-label">
@@ -79,10 +73,7 @@ $instagram_url = 'https://www.instagram.com/ninowebstudio/';
         ?>"
     >
         <span class="contact-dock-icon">
-            <i
-                class="fa-brands fa-instagram"
-                aria-hidden="true"
-            ></i>
+            <?php echo ninoweb_icon( 'instagram', 'brands', '' ); ?>
         </span>
 
         <span class="contact-dock-label">

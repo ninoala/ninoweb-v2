@@ -50,7 +50,7 @@
   border-radius: 22px;
   box-shadow: 0 12px 40px rgba(6, 27, 53, 0.07);
 
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card::before {
@@ -74,6 +74,8 @@
 .project-card-large {
   grid-column: span 3;
 }
+
+
 
 .project-card:hover,
 .project-card:focus-within {
@@ -129,12 +131,19 @@
   object-fit: cover;
   object-position: top center;
 
-  transition: transform 0.45s ease, filter 0.45s ease;
+  transition: transform 0.45s ease;
 }
 
-.project-card:hover .project-image img {
-  transform: scale(1.035);
-  filter: saturate(1.04);
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-image img {
+    transform: scale(1.035);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-image img {
+    transition: none;
+  }
 }
 
 /* Project content */
@@ -155,7 +164,7 @@
 .project-label {
   margin: 0 0 9px;
 
-  color: #ff8a00;
+  color: #c54800;
   font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;

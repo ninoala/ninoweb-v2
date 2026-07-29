@@ -46,26 +46,30 @@ function ninoweb_asset_version($relative_path) {
 -------------------- */
 
 function ninoweb_enqueue_assets() {
-    wp_enqueue_style(
-        'ninoweb-fonts',
-        'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap',
-        [],
-        null
-    );
+    $current_language = function_exists( 'pll_current_language' )
+    ? pll_current_language( 'slug' )
+    : 'en';
+
+    if ( 'ja' === $current_language ) {
+        $noto_css_path = get_template_directory()
+            . '/assets/fonts/noto-sans-jp/wght.css';
+
+        wp_enqueue_style(
+            'ninoweb-noto-sans-jp',
+            get_template_directory_uri()
+                . '/assets/fonts/noto-sans-jp/wght.css',
+            [],
+            file_exists( $noto_css_path )
+                ? filemtime( $noto_css_path )
+                : null
+        );
+    }
 
     wp_enqueue_style(
         'ninoweb-style',
         get_stylesheet_uri(),
-        ['ninoweb-fonts'],
-        ninoweb_asset_version('/style.css')
-    );
-
-    wp_enqueue_script(
-        'font-awesome',
-        'https://kit.fontawesome.com/9fa7db7f27.js',
         [],
-        null,
-        false
+        ninoweb_asset_version('/style.css')
     );
 
     wp_enqueue_script(
@@ -666,7 +670,6 @@ function ninoweb_enqueue_contact_script() {
 }
 add_action('wp_enqueue_scripts', 'ninoweb_enqueue_contact_script');
 
-
 function ninoweb_handle_contact_form() {
     if (
         ! isset($_POST['ninoweb_contact_nonce']) ||
@@ -679,23 +682,30 @@ function ninoweb_handle_contact_form() {
     ) {
         wp_send_json_error(
             array(
-                'message' => ninoweb_text('form_verification_error'),
+                'message' => ninoweb_text(
+                    'form_verification_error'
+                ),
             ),
             403
         );
     }
 
     $name = isset($_POST['name'])
-        ? sanitize_text_field(wp_unslash($_POST['name']))
+        ? sanitize_text_field(
+            wp_unslash($_POST['name'])
+        )
         : '';
 
     $email = isset($_POST['email'])
-        ? sanitize_email(wp_unslash($_POST['email']))
+        ? sanitize_email(
+            wp_unslash($_POST['email'])
+        )
         : '';
 
     $service = isset($_POST['project_type'])
         ? sanitize_text_field(
-        wp_unslash($_POST['project_type']))
+            wp_unslash($_POST['project_type'])
+        )
         : '';
 
     $message = '';
@@ -713,27 +723,25 @@ function ninoweb_handle_contact_form() {
     if (
         empty($name) ||
         empty($email) ||
-        empty($message)
+        empty($message) ||
+        ! is_email($email)
     ) {
         wp_send_json_error(
             array(
-                'message' => ninoweb_text('contact_error'),
+                'message' => ninoweb_text(
+                    'contact_error'
+                ),
             ),
             400
         );
     }
 
-    if (! is_email($email)) {
-        wp_send_json_error(
-            array(
-                'message' => ninoweb_text('contact_error'),
-            ),
-            400
-        );
-    }
+    $to = 'hello@ninoweb.net';
 
-    $to      = get_option('admin_email');
-    $subject = 'New NinoWeb inquiry from ' . $name;
+    $subject = sprintf(
+        'New NinoWeb inquiry from %s',
+        $name
+    );
 
     $body  = "Name: {$name}\n";
     $body .= "Email: {$email}\n";
@@ -746,7 +754,12 @@ function ninoweb_handle_contact_form() {
 
     $headers = array(
         'Content-Type: text/plain; charset=UTF-8',
-        'Reply-To: ' . $name . ' <' . $email . '>',
+        'From: NinoWeb <hello@ninoweb.net>',
+        sprintf(
+            'Reply-To: %s <%s>',
+            $name,
+            $email
+        ),
     );
 
     $sent = wp_mail(
@@ -759,7 +772,9 @@ function ninoweb_handle_contact_form() {
     if (! $sent) {
         wp_send_json_error(
             array(
-                'message' => ninoweb_text('contact_error'),
+                'message' => ninoweb_text(
+                    'contact_error'
+                ),
             ),
             500
         );
@@ -767,7 +782,9 @@ function ninoweb_handle_contact_form() {
 
     wp_send_json_success(
         array(
-            'message' => ninoweb_text('contact_success'),
+            'message' => ninoweb_text(
+                'contact_success'
+            ),
         )
     );
 }
@@ -781,3 +798,107 @@ add_action(
     'wp_ajax_nopriv_ninoweb_contact_form',
     'ninoweb_handle_contact_form'
 );
+
+/* --------------------
+   REMOVE UNUSED BLOCK CSS
+   FROM CUSTOM HOMEPAGE
+-------------------- */
+
+function ninoweb_remove_front_page_block_styles() {
+    if (! is_front_page()) {
+        return;
+    }
+
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
+    wp_dequeue_style('classic-theme-styles');
+    wp_dequeue_style('global-styles');
+}
+
+add_action(
+    'wp_enqueue_scripts',
+    'ninoweb_remove_front_page_block_styles',
+    100
+);
+
+/* --------------------
+   REMOVE FRONT-END EMOJI ASSETS
+-------------------- */
+
+function ninoweb_disable_frontend_emoji_assets() {
+    remove_action(
+        'wp_head',
+        'print_emoji_detection_script',
+        7
+    );
+
+    remove_action(
+        'wp_print_styles',
+        'print_emoji_styles'
+    );
+}
+
+add_action(
+    'init',
+    'ninoweb_disable_frontend_emoji_assets'
+);
+
+/* --------------------
+   ICONS HELPER
+-------------------- */
+
+function ninoweb_icon(
+    $name,
+    $style = 'solid',
+    $classes = ''
+) {
+    $allowed_styles = [ 'solid', 'brands' ];
+
+    if ( ! in_array( $style, $allowed_styles, true ) ) {
+        return '';
+    }
+
+    $name = sanitize_key( $name );
+
+    $icon_path = get_template_directory()
+        . "/assets/icons/fontawesome/{$style}/{$name}.svg";
+
+    if ( ! file_exists( $icon_path ) ) {
+        return '';
+    }
+
+    $svg = file_get_contents( $icon_path );
+
+    if ( false === $svg ) {
+        return '';
+    }
+
+    $class_list = preg_split(
+        '/\s+/',
+        trim( $classes )
+    );
+
+    $class_list = array_filter(
+        array_map(
+            'sanitize_html_class',
+            $class_list
+        )
+    );
+
+    array_unshift(
+        $class_list,
+        'ninoweb-icon'
+    );
+
+    $class_attribute = esc_attr(
+        implode( ' ', $class_list )
+    );
+
+    return preg_replace(
+        '/<svg\b/',
+        '<svg class="' . $class_attribute
+            . '" aria-hidden="true" focusable="false"',
+        $svg,
+        1
+    );
+}

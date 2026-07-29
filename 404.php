@@ -48,10 +48,7 @@ get_header();
             );
             ?>
 
-            <i
-                class="fa-solid fa-arrow-right"
-                aria-hidden="true"
-            ></i>
+            <?php echo ninoweb_icon( 'arrow-right', 'solid', '' ); ?>
         </a>
 
     </div>

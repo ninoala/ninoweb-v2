@@ -8,13 +8,24 @@
   box-sizing: border-box;
 }
 
+@each $weight in 400, 500, 600, 700, 800 {
+  @font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-display: optional;
+    font-weight: $weight;
+    src: url("assets/fonts/poppins/poppins-latin-#{$weight}-normal.woff2")
+      format("woff2");
+  }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
 }
 
 html[lang^="ja"] body {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP Variable", Arial, sans-serif;
 }
 
 html[lang^="ja"] h1,
@@ -62,7 +73,7 @@ a {
 
 .section-eyebrow,
 .eyebrow {
-  color: #ff8a00;
+  color: #c54800;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -90,6 +101,16 @@ h2 {
   margin-bottom: 40px;
   font-size: clamp(2rem, 4vw, 3.25rem);
   line-height: 1.1;
+}
+
+.ninoweb-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  overflow: visible;
+  fill: currentColor;
+  vertical-align: -0.125em;
 }
 
 @media (max-width: 900px) {

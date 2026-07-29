@@ -156,7 +156,8 @@
 .hero-image img {
   display: block;
 
-  width: 130%;
+  width: 100%;
+  height: auto;
   max-width: none;
 
   filter: drop-shadow(0 38px 55px rgba(0, 0, 0, 0.32));
@@ -208,6 +209,14 @@
   background: rgba(255, 138, 0, 0.08);
   border: 1px solid rgba(255, 138, 0, 0.18);
   border-radius: 10px;
+}
+
+@media (min-width: 901px) {
+  .hero-image img {
+    width: 150%;
+    max-width: none;
+    transform: translateX(-80px);
+  }
 }
 
 /* Tablet */

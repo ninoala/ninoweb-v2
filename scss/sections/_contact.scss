@@ -244,7 +244,7 @@
 .contact-form-heading p {
   margin: 0 0 6px;
 
-  color: #ff8a00;
+  color: #c54800;
   font-size: 0.68rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -340,14 +340,14 @@
   transition: transform 0.25s ease;
 }
 
-.contact-submit:hover i {
+.contact-submit:hover .ninoweb-icon {
   transform: translateX(3px);
 }
 
 .contact-privacy {
   margin: 13px 0 0;
 
-  color: #718096;
+  color: #6b7787;
   font-size: 0.7rem;
   line-height: 1.5;
   text-align: center;
@@ -450,4 +450,15 @@
 .contact-channel:hover .contact-channel-arrow {
   transform: translate(2px, calc(-50% - 2px));
 }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

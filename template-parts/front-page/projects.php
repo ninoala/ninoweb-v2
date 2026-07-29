@@ -1,3 +1,24 @@
+<?php
+$images_base = trailingslashit(
+    get_theme_file_uri('/assets/images')
+);
+
+$make_project_srcset = static function ($image_name) use ($images_base) {
+    return sprintf(
+        '%1$s 480w, %2$s 768w, %3$s 1200w',
+        $images_base . $image_name . '-480.webp',
+        $images_base . $image_name . '-768.webp',
+        $images_base . $image_name . '-1200.webp'
+    );
+};
+
+$cardoctor_srcset = $make_project_srcset('cardoctor');
+$natours_srcset   = $make_project_srcset('natours');
+$nexter_srcset = $make_project_srcset('nexter');
+$ynino_srcset  = $make_project_srcset('ynino');
+$trillo_srcset = $make_project_srcset('trillo');
+?>
+
 <section id="projects" class="projects section">
     <div class="container">
         <p class="section-eyebrow">
@@ -31,17 +52,16 @@
             <article class="project-card project-card-large">
                 <div class="project-image">
                     <img
-                        src="<?php
-                            echo esc_url(
-                                get_template_directory_uri() .
-                                '/assets/images/cardoctor.png'
-                            );
-                        ?>"
-                        alt="<?php
-                            echo esc_attr(
-                                ninoweb_text('project_cardoctor_alt')
-                            );
-                        ?>"
+                        src="<?php echo esc_url(
+                            $images_base . 'cardoctor-1200.webp'
+                        ); ?>"
+                        srcset="<?php echo esc_attr($cardoctor_srcset); ?>"
+                        sizes="(max-width: 767px) calc(100vw - 32px), 270px"
+                        width="1200"
+                        height="675"
+                        alt="<?php echo esc_attr(
+                            ninoweb_text('project_cardoctor_alt')
+                        ); ?>"
                         loading="lazy"
                         decoding="async"
                     >
@@ -113,10 +133,7 @@
                             );
                             ?>
 
-                            <i
-                                class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"
-                            ></i>
+                            <?php echo ninoweb_icon( 'arrow-up-right-from-square', 'solid', '' ); ?>
                         </a>
                     </div>
                 </div>
@@ -127,17 +144,16 @@
             <article class="project-card project-card-large">
                 <div class="project-image">
                     <img
-                        src="<?php
-                            echo esc_url(
-                                get_template_directory_uri() .
-                                '/assets/images/nexxter.png'
-                            );
-                        ?>"
-                        alt="<?php
-                            echo esc_attr(
-                                ninoweb_text('project_nexter_alt')
-                            );
-                        ?>"
+                        src="<?php echo esc_url(
+                            $images_base . 'nexter-1200.webp'
+                        ); ?>"
+                        srcset="<?php echo esc_attr($nexter_srcset); ?>"
+                        sizes="(max-width: 767px) calc(100vw - 32px), 270px"
+                        width="1200"
+                        height="675"
+                        alt="<?php echo esc_attr(
+                            ninoweb_text('project_nexter_alt')
+                        ); ?>"
                         loading="lazy"
                         decoding="async"
                     >
@@ -215,10 +231,7 @@
                             );
                             ?>
 
-                            <i
-                                class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"
-                            ></i>
+                            <?php echo ninoweb_icon( 'arrow-up-right-from-square', 'solid', '' ); ?>
                         </a>
                     </div>
                 </div>
@@ -229,17 +242,16 @@
             <article class="project-card">
                 <div class="project-image">
                     <img
-                        src="<?php
-                            echo esc_url(
-                                get_template_directory_uri() .
-                                '/assets/images/natours.png'
-                            );
-                        ?>"
-                        alt="<?php
-                            echo esc_attr(
-                                ninoweb_text('project_natours_alt')
-                            );
-                        ?>"
+                        src="<?php echo esc_url(
+                            $images_base . 'natours-1200.webp'
+                        ); ?>"
+                        srcset="<?php echo esc_attr($natours_srcset); ?>"
+                        sizes="(max-width: 767px) calc(100vw - 32px), 220px"
+                        width="1200"
+                        height="675"
+                        alt="<?php echo esc_attr(
+                            ninoweb_text('project_natours_alt')
+                        ); ?>"
                         loading="lazy"
                         decoding="async"
                     >
@@ -311,10 +323,7 @@
                             );
                             ?>
 
-                            <i
-                                class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"
-                            ></i>
+                            <?php echo ninoweb_icon( 'arrow-up-right-from-square', 'solid', '' ); ?>
                         </a>
                     </div>
                 </div>
@@ -325,22 +334,20 @@
             <article class="project-card">
                 <div class="project-image">
                     <img
-                        src="<?php
-                            echo esc_url(
-                                get_template_directory_uri() .
-                                '/assets/images/ynino.png'
-                            );
-                        ?>"
-                        alt="<?php
-                            echo esc_attr(
-                                ninoweb_text('project_ynino_alt')
-                            );
-                        ?>"
+                        src="<?php echo esc_url(
+                            $images_base . 'ynino-1200.webp'
+                        ); ?>"
+                        srcset="<?php echo esc_attr($ynino_srcset); ?>"
+                        sizes="(max-width: 767px) calc(100vw - 32px), 220px"
+                        width="1200"
+                        height="675"
+                        alt="<?php echo esc_attr(
+                            ninoweb_text('project_ynino_alt')
+                        ); ?>"
                         loading="lazy"
                         decoding="async"
                     >
                 </div>
-
                 <div class="project-content">
                     <p class="project-label">
                         <?php
@@ -407,10 +414,7 @@
                             );
                             ?>
 
-                            <i
-                                class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"
-                            ></i>
+                            <?php echo ninoweb_icon( 'arrow-up-right-from-square', 'solid', '' ); ?>
                         </a>
                     </div>
                 </div>
@@ -421,17 +425,16 @@
             <article class="project-card">
                 <div class="project-image">
                     <img
-                        src="<?php
-                            echo esc_url(
-                                get_template_directory_uri() .
-                                '/assets/images/trillo.png'
-                            );
-                        ?>"
-                        alt="<?php
-                            echo esc_attr(
-                                ninoweb_text('project_trillo_alt')
-                            );
-                        ?>"
+                        src="<?php echo esc_url(
+                            $images_base . 'trillo-1200.webp'
+                        ); ?>"
+                        srcset="<?php echo esc_attr($trillo_srcset); ?>"
+                        sizes="(max-width: 767px) calc(100vw - 32px), 220px"
+                        width="1200"
+                        height="670"
+                        alt="<?php echo esc_attr(
+                            ninoweb_text('project_trillo_alt')
+                        ); ?>"
                         loading="lazy"
                         decoding="async"
                     >
@@ -509,10 +512,7 @@
                             );
                             ?>
 
-                            <i
-                                class="fa-solid fa-arrow-up-right-from-square"
-                                aria-hidden="true"
-                            ></i>
+                            <?php echo ninoweb_icon( 'arrow-up-right-from-square', 'solid', '' ); ?>
                         </a>
                     </div>
                 </div>

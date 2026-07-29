@@ -96,7 +96,7 @@ $japanese_url = $get_language_url('ja');
                     class="language-popup__choice-arrow"
                     aria-hidden="true"
                 >
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <?php echo ninoweb_icon( 'arrow-right', 'solid', '' ); ?>
                 </span>
             </a>
 
@@ -115,7 +115,7 @@ $japanese_url = $get_language_url('ja');
                     class="language-popup__choice-arrow"
                     aria-hidden="true"
                 >
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <?php echo ninoweb_icon( 'arrow-right', 'solid', '' ); ?>
                 </span>
             </a>
         </div>

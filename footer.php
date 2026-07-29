@@ -41,10 +41,7 @@ $ninoweb_footer_home_url = trailingslashit(
                 </p>
 
                 <p class="footer-location">
-                    <i
-                        class="fa-solid fa-location-dot"
-                        aria-hidden="true"
-                    ></i>
+                    <?php echo ninoweb_icon( 'location-dot', 'solid', '' ); ?>
 
                     <?php
                     echo esc_html(
@@ -239,10 +236,7 @@ $ninoweb_footer_home_url = trailingslashit(
                 >
                     hello@ninoweb.net
 
-                    <i
-                        class="fa-solid fa-arrow-up-right-from-square"
-                        aria-hidden="true"
-                    ></i>
+                    <?php echo ninoweb_icon( 'arrow-up-right-from-square', 'solid', '' ); ?>
                 </a>
             </div>
 
