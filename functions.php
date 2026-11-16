@@ -155,7 +155,7 @@ function ninoweb_theme_strings() {
             'grow.',
 
         'hero_description' =>
-            'Custom WordPress websites that help your business stand out online, work beautifully on every device, and include reliable support after launch.',
+            'Custom WordPress websites and redesigns built around your business goals. Work directly with your developer to create a website that looks professional, builds trust, and makes it easy for customers to get in touch.',
 
         'hero_primary_cta' =>
             'Get a Free Quote',
@@ -166,14 +166,11 @@ function ninoweb_theme_strings() {
         'hero_image_alt' =>
             'Example of a responsive website displayed on a laptop',
 
-        'hero_feature_custom' =>
-            'Custom Designed for Your Business',
+        'hero_feature_consultation' =>
+            'Free Initial Consultation',
 
-        'hero_feature_mobile' =>
-            'Look Great on Mobile',
-
-        'hero_feature_seo' =>
-            'Search Engine Optimized',
+        'hero_feature_pricing' =>
+            'Clear Pricing',
 
         'hero_feature_support' =>
             'Support After Launch',
@@ -238,113 +235,89 @@ function ninoweb_theme_strings() {
         'service_support_cta' =>
             'Get ongoing website support',
 
-        'projects_eyebrow' =>
+         'projects_eyebrow' =>
             'Selected Work',
 
         'projects_heading' =>
             'A look at our work',
 
         'projects_intro' =>
-            'A selection of projects focused on clear design, mobile usability, and real business goals.',
+            'Real websites built for businesses in Canada, Australia, and Japan.',
 
         'project_view' =>
             'View Project',
 
+        'projects_cta_text' =>
+            'Like what you see? Let’s build yours.',
 
-        'project_cardoctor_alt' =>
-            'CarDoctor website screenshot',
+        'projects_cta_button' =>
+            'Get a Free Quote',
 
-        'project_cardoctor_label' =>
-            'Car Repair Shop',
+        // Buenas Noches
+        'project_buenas_noches_alt' =>
+            'Buenas Noches mobile bartending website screenshot',
 
-        'project_cardoctor_description' =>
-            'Custom WordPress website for an automotive service business.',
+        'project_buenas_noches_label' =>
+            'Mobile Bartending',
 
-        'project_cardoctor_tag_one' =>
-            'Custom Design',
+        'project_buenas_noches_location' =>
+            'Ottawa, Canada',
 
-        'project_cardoctor_tag_two' =>
+        'project_buenas_noches_description' =>
+            'Bilingual WordPress website for a mobile bartending business, making it easy for customers to explore their services and inquire about an event.',
+
+        'project_buenas_noches_tag_one' =>
+            'Bilingual Website',
+
+        'project_buenas_noches_tag_two' =>
             'Service Showcase',
 
-        'project_cardoctor_tag_three' =>
-            'Mobile Friendly',
+        'project_buenas_noches_tag_three' =>
+            'Event Inquiries',
 
+        // Australian Stars
+        'project_australian_stars_alt' =>
+            'Australian Stars window cleaning website screenshot',
 
-        'project_nexter_alt' =>
-            'Nexter real estate website screenshot',
+        'project_australian_stars_label' =>
+            'Window Cleaning',
 
-        'project_nexter_label' =>
-            'Luxury Real Estate',
+        'project_australian_stars_location' =>
+            'Sunshine Coast, Australia',
 
-        'project_nexter_title' =>
-            'Real Estate Website (Nexter)',
+        'project_australian_stars_description' =>
+            'A website for a local cleaning business that clearly presents its services, builds trust with customer reviews, and makes it easy for customers to request a quote.',
 
-        'project_nexter_description' =>
-            'Responsive layout for property listings, agent branding, and lead generation.',
+        'project_australian_stars_tag_one' =>
+            'Service Showcase',
 
-        'project_nexter_tag_one' =>
-            'Property Listings',
+        'project_australian_stars_tag_two' =>
+            'Quote Requests',
 
-        'project_nexter_tag_two' =>
-            'Lead Generation',
+        'project_australian_stars_tag_three' =>
+            'Customer Reviews',
 
-        'project_nexter_tag_three' =>
+        // CarDoctor
+        'project_cardoctor_alt' =>
+            'CarDoctor automotive services website screenshot',
+
+        'project_cardoctor_label' =>
+            'Automotive Services',
+
+        'project_cardoctor_location' =>
+            'Mitsuke, Japan',
+
+        'project_cardoctor_description' =>
+            'A custom WordPress website for a Japanese automotive service business, designed to showcase its services, help customers find the information they need, and make content updates simple for the owner.',
+
+        'project_cardoctor_tag_one' =>
+            'Service Showcase',
+
+        'project_cardoctor_tag_two' =>
             'Easy Navigation',
 
-
-        'project_natours_alt' =>
-            'Natours travel website screenshot',
-
-        'project_natours_label' =>
-            'Adventure Travel Company',
-
-        'project_natours_description' =>
-            'Travel landing page with strong visuals and clean, responsive sections.',
-
-        'project_natours_tag_one' =>
-            'Engaging Design',
-
-        'project_natours_tag_two' =>
-            'Tour Showcase',
-
-
-        'project_ynino_alt' =>
-            'YNino developer portfolio screenshot',
-
-        'project_ynino_label' =>
-            'Personal Portfolio',
-
-        'project_ynino_description' =>
-            'A personal website created to showcase development work and experience.',
-
-        'project_ynino_tag_one' =>
-            'Project Showcase',
-
-        'project_ynino_tag_two' =>
-            'Interactive Design',
-
-        'project_ynino_tag_three' =>
-            'Clear Navigation',
-
-
-        'project_trillo_alt' =>
-            'Trillo booking application screenshot',
-
-        'project_trillo_label' =>
-            'Hotel Booking Platform',
-
-        'project_trillo_title' =>
-            'Trillo Booking App',
-
-        'project_trillo_description' =>
-            'Responsive travel booking interface focused on clear navigation and flexible layouts.',
-
-        'project_trillo_tag_one' =>
-            'Booking Experience',
-
-        'project_trillo_tag_two' =>
-            'Search & Filters',
-
+        'project_cardoctor_tag_three' =>
+            'Easy Content Updates',
 
         'about_eyebrow' =>
             'About NinoWeb',
@@ -463,7 +436,7 @@ function ninoweb_theme_strings() {
             'Let’s talk about your website',
 
         'contact_intro' =>
-            'Tell me about your business, your current website, and what you would like to improve. I’ll review the details and get back to you with clear next steps.',
+            'Tell me a little about your business and what you have in mind for your website. Whether you need something new or want to improve an existing site, I`ll review your details and get back to you with clear next steps.',
 
         'contact_channels_label' =>
             'Quick contact options',
@@ -538,13 +511,15 @@ function ninoweb_theme_strings() {
             'Tell me about your business and what you would like your website to achieve.',
 
         'contact_submit' =>
-            'Send Project Details',
+            'Request A Free Quote',
 
         'contact_privacy' =>
             'Your information will only be used to respond to your inquiry.',
 
-            'footer_description' =>
-            'Professional WordPress websites designed to help small businesses build trust and grow online.',
+        'footer_description' =>
+        'Professional WordPress websites designed to help small businesses build trust and grow online.',
+        
+        'contact_sending' => 'Sending...',
 
         'footer_navigation_label' =>
             'Footer navigation',
@@ -604,18 +579,13 @@ function ninoweb_register_polylang_strings() {
 
 add_action('init', 'ninoweb_register_polylang_strings');
 
-
 /**
  * Retrieve a translated theme string by its key.
- *
- * Example:
- *
- * echo esc_html(ninoweb_text('skip_to_content'));
  */
 function ninoweb_text($key) {
     $strings = ninoweb_theme_strings();
 
-    if (! isset($strings[$key])) {
+    if (!isset($strings[$key])) {
         return '';
     }
 
@@ -627,8 +597,6 @@ function ninoweb_text($key) {
 
     return $text;
 }
-
-
 /* --------------------
    CONTACT REDIRECT URL
 -------------------- */
@@ -724,6 +692,17 @@ function ninoweb_handle_contact_form() {
         empty($name) ||
         empty($email) ||
         empty($message) ||
+        empty($service) ||
+        ! in_array(
+            $service,
+            array(
+                'New website',
+                'Website redesign',
+                'Maintenance',
+                'Other',
+            ),
+            true
+        ) ||
         ! is_email($email)
     ) {
         wp_send_json_error(
@@ -798,6 +777,20 @@ add_action(
     'wp_ajax_nopriv_ninoweb_contact_form',
     'ninoweb_handle_contact_form'
 );
+
+// Reject submissions that fill the honeypot field.
+$honeypot = isset($_POST['website'])
+    ? sanitize_text_field(wp_unslash($_POST['website']))
+    : '';
+
+if (trim($honeypot) !== '') {
+    wp_send_json_error(
+        array(
+            'message' => ninoweb_text('contact_error'),
+        ),
+        400
+    );
+}
 
 /* --------------------
    REMOVE UNUSED BLOCK CSS

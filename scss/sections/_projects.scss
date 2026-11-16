@@ -1,343 +1,406 @@
-/* --------------------
-   PROJECTS
--------------------- */
-
 .projects {
-  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  color: #f8fbff;
+  background:
+    radial-gradient(ellipse at 82% 0%, rgba(28, 83, 130, 0.32), transparent 56%),
+    linear-gradient(135deg, #09223d 0%, #07182b 100%);
 }
 
 .projects .container {
-  max-width: 1040px;
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+}
+
+.projects .section-eyebrow {
+  color: #ff9b25;
 }
 
 .projects h2 {
   max-width: 760px;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .projects-intro {
   max-width: 670px;
-  margin: 0 0 46px;
-
-  color: #4b5f76;
+  margin: 0 0 48px;
+  color: #b6c9db;
   font-size: 1rem;
   line-height: 1.75;
 }
 
-/* Grid */
-
+/* One featured full-width project, two supporting projects below. */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
   align-items: stretch;
 }
 
-/* Default card: three per row */
-
 .project-card {
-  position: relative;
-  grid-column: span 2;
-
   display: flex;
   flex-direction: column;
-  height: 100%;
   min-width: 0;
+  height: 100%;
   overflow: hidden;
-
-  background: #ffffff;
-  border: 1px solid #e1e9f1;
-  border-radius: 22px;
-  box-shadow: 0 12px 40px rgba(6, 27, 53, 0.07);
-
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  background: linear-gradient(160deg, rgba(22, 54, 86, 0.96), rgba(12, 37, 63, 0.96));
+  border: 1px solid rgba(200, 219, 239, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 18px 48px rgba(0, 7, 21, 0.24);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-.project-card::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 3;
-
-  height: 3px;
-
-  content: "";
-
-  background: #ff8a00;
-
-  opacity: 0;
-  transform: scaleX(0.5);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+.project-card-featured {
+  grid-column: 1 / -1;
+  border-color: rgba(255, 155, 37, 0.32);
+  box-shadow: 0 26px 60px rgba(0, 7, 21, 0.34);
 }
 
-.project-card-large {
-  grid-column: span 3;
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover,
+  .project-card:focus-within {
+    transform: translateY(-4px);
+    border-color: rgba(255, 155, 37, 0.55);
+    box-shadow: 0 28px 66px rgba(0, 7, 21, 0.38);
+  }
+
+  .project-card:hover .project-image img {
+    transform: scale(1.025);
+  }
 }
 
-
-
-.project-card:hover,
-.project-card:focus-within {
-  transform: translateY(-7px);
-  border-color: rgba(255, 138, 0, 0.28);
-  box-shadow: 0 22px 60px rgba(6, 27, 53, 0.13);
-}
-
-.project-card:hover::before,
-.project-card:focus-within::before {
-  opacity: 1;
-  transform: scaleX(1);
-}
-
-/* Project image */
-
+/* Screenshot flush with the card edge — NO fake browser frame/buttons. */
 .project-image {
   position: relative;
-
-  flex: 0 0 220px;
-  height: 220px;
+  width: 100%;
+  aspect-ratio: 16 / 10; // Supporting cards: slightly taller previews.
   overflow: hidden;
-
-  background: #eef3f8;
+  background: #16334f;
+  border-bottom: 1px solid rgba(200, 219, 239, 0.15);
 }
 
-.project-card-large .project-image {
-  flex-basis: 270px;
-  height: 270px;
+.project-card-featured .project-image {
+  aspect-ratio: 2.35 / 1;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.45s ease;
 }
 
 .project-image::after {
   position: absolute;
   inset: 0;
-
-  content: "";
-
-  background: linear-gradient(
-    to bottom,
-    transparent 70%,
-    rgba(6, 27, 53, 0.08)
-  );
-
+  content: '';
   pointer-events: none;
+  background: linear-gradient(to bottom, transparent 74%, rgba(4, 18, 34, 0.10));
 }
 
-.project-image img {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: top center;
-
-  transition: transform 0.45s ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .project-card:hover .project-image img {
-    transform: scale(1.035);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .project-image img {
-    transition: none;
-  }
-}
-
-/* Project content */
-
+/* Project details are PART of a single bordered card. */
 .project-content {
   display: flex;
   flex: 1;
   flex-direction: column;
   min-width: 0;
-
-  padding: 26px;
+  padding: 28px 30px 30px;
 }
 
-.project-card-large .project-content {
-  padding: 30px;
+.project-card-featured .project-content {
+  padding: 30px 36px 34px;
 }
 
 .project-label {
-  margin: 0 0 9px;
-
-  color: #c54800;
+  margin: 0 0 8px;
+  color: #ffad48;
   font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.10em;
 }
 
 .project-card h3 {
-  margin: 0 0 13px;
-
-  color: #102033;
-  font-size: 1.22rem;
-  line-height: 1.35;
-  letter-spacing: -0.02em;
+  margin: 0 0 9px;
+  color: #fff;
+  font-size: clamp(1.3rem, 1.65vw, 1.65rem);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
 }
 
-.project-card-large h3 {
-  font-size: 1.38rem;
+.project-card-featured h3 {
+  font-size: clamp(1.65rem, 2.5vw, 2rem);
 }
 
-.project-description,
-.project-content > p:not(.project-label) {
-  margin: 0 0 24px;
+.project-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  color: #b6c9db;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
 
-  color: #4b5f76;
-  font-size: 0.9rem;
+.project-location i,
+.project-location svg {
+  flex-shrink: 0;
+  color: #ff9b25;
+  font-size: 0.85rem;
+}
+
+.project-description {
+  max-width: 68ch;
+  margin: 0 0 22px;
+  color: #ccd9e6;
+  font-size: 0.95rem;
   line-height: 1.7;
 }
 
-.project-card-large .project-description,
-.project-card-large .project-content > p:not(.project-label) {
-  font-size: 0.95rem;
+.project-card-featured .project-description {
+  max-width: 88ch;
+  font-size: 1rem;
 }
-
-/* Card footer */
 
 .project-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-
+  gap: 18px;
   width: 100%;
-  min-width: 0;
   margin-top: auto;
-  padding-top: 18px;
-
-  border-top: 1px solid #e4ebf3;
+  padding-top: 20px;
+  border-top: 1px solid rgba(225, 233, 241, 0.15);
 }
-
-/* Smaller cards need more room for tags */
-
-.project-card:not(.project-card-large) .project-footer {
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* Customer-friendly tags */
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 7px;
   min-width: 0;
 }
 
 .project-tags span {
-  padding: 6px 9px;
-
-  color: #38506a;
-  font-size: 0.7rem;
+  padding: 7px 11px;
+  color: #dbe7f3;
+  font-size: 0.72rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.25;
   white-space: nowrap;
-
-  background: #eef3f8;
-  border: 1px solid rgba(13, 59, 102, 0.05);
+  background: rgba(255, 255, 255, 0.065);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 999px;
 }
 
-/* Project link */
-
+/* Small outlined action pill: easier to spot, secondary to the orange quote CTA. */
 .project-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  gap: 8px;
-
-  color: #0d3b66;
-  font-size: 0.82rem;
+  gap: 9px;
+  min-height: 36px;
+  padding: 8px 13px;
+  color: #ffb454;
+  font-size: 0.89rem;
   font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
   white-space: nowrap;
-
-  transition: color 0.25s ease, gap 0.25s ease;
+  background: rgba(255, 155, 37, 0.09);
+  border: 1px solid rgba(255, 155, 37, 0.40);
+  border-radius: 999px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.project-link i {
-  color: #ff8a00;
-  font-size: 0.75rem;
-
-  transition: transform 0.25s ease;
+.project-link i,
+.project-link svg {
+  font-size: 0.82rem;
+  transition: transform 0.2s ease;
 }
 
 .project-link:hover,
 .project-link:focus-visible {
-  gap: 11px;
-  color: #ff8a00;
+  color: #fff;
+  background: rgba(255, 155, 37, 0.19);
+  border-color: rgba(255, 155, 37, 0.7);
 }
 
 .project-link:hover i,
-.project-link:focus-visible i {
+.project-link:hover svg,
+.project-link:focus-visible i,
+.project-link:focus-visible svg {
   transform: translate(2px, -2px);
 }
 
-/* Tablet */
-
-@media (max-width: 900px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card,
-  .project-card-large {
-    grid-column: auto;
-  }
-
-  .project-image,
-  .project-card-large .project-image {
-    flex-basis: 260px;
-    height: 260px;
-  }
-
-  .project-card:not(.project-card-large) .project-footer {
-    align-items: center;
-    flex-direction: row;
-  }
+.project-link:focus-visible {
+  outline: 3px solid #ff9b25;
+  outline-offset: 3px;
 }
 
-/* Mobile */
+/* Dedicated conversion CTA below the portfolio. */
+.projects-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 66px;
+  padding-top: 42px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
 
-@media (max-width: 600px) {
-  .projects h2 {
-    margin-bottom: 18px;
-  }
+.projects-cta p {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  font-weight: 800;
+  line-height: 1.35;
+}
 
-  .projects-intro {
-    margin-bottom: 36px;
-    font-size: 0.95rem;
-  }
+.projects-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 13px 27px;
+  color: #102033;
+  font-size: 0.93rem;
+  font-weight: 800;
+  text-decoration: none;
+  background: #ff8a00;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
 
-  .projects-grid {
-    gap: 22px;
-  }
+.projects-cta-button:hover,
+.projects-cta-button:focus-visible {
+  color: #102033;
+  background: #ffa32b;
+  transform: translateY(-2px);
+}
 
-  .project-image,
-  .project-card-large .project-image {
-    flex-basis: 215px;
-    height: 215px;
-  }
+.projects-cta-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
 
-  .project-content,
-  .project-card-large .project-content {
+@media (max-width: 1050px) {
+  .project-content {
     padding: 24px;
   }
 
-  .project-card h3,
-  .project-card-large h3 {
-    font-size: 1.2rem;
+  .project-card-featured .project-content {
+    padding: 28px;
   }
 
-  .project-card:not(.project-card-large) .project-footer,
   .project-footer {
     align-items: flex-start;
     flex-direction: column;
+    gap: 12px;
   }
+}
+
+@media (max-width: 720px) {
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 690px;
+    gap: 24px;
+    margin-inline: auto;
+  }
+
+  .project-card-featured {
+    grid-column: auto;
+  }
+
+  .project-card-featured .project-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .project-card-featured h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-intro {
+    margin-bottom: 35px;
+    font-size: 0.95rem;
+  }
+
+  .project-card {
+    border-radius: 16px;
+  }
+
+  .project-image,
+  .project-card-featured .project-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .project-content,
+  .project-card-featured .project-content {
+    padding: 23px;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card-featured h3 {
+    font-size: 1.55rem;
+  }
+
+  .projects-cta {
+    margin-top: 45px;
+    padding-top: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-image img,
+  .project-link,
+  .projects-cta-button {
+    transition: none;
+  }
+}
+
+/* -------------------------------------------------------------
+   Global accessibility correction: skip link visible only on focus.
+   This is bundled here for a one-file patch; it can eventually live
+   in your global accessibility stylesheet.
+------------------------------------------------------------- */
+.skip-link:not(:focus) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.skip-link:focus {
+  position: fixed !important;
+  top: 12px !important;
+  left: 12px !important;
+  z-index: 9999;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  clip-path: none !important;
+  transform: none !important;
+  opacity: 1 !important;
 }

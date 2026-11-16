@@ -110,43 +110,31 @@ $hero_srcset = sprintf(
 
     <ul class="hero-services">
         <li>
-            <?php echo ninoweb_icon( 'bezier-curve', 'solid', '' ); ?>
+            <?php echo ninoweb_icon( 'comments', 'solid', '' ); ?>
 
             <span>
                 <?php
                 echo esc_html(
-                    ninoweb_text('hero_feature_custom')
+                    ninoweb_text('hero_feature_consultation')
                 );
                 ?>
             </span>
         </li>
 
         <li>
-            <?php echo ninoweb_icon( 'mobile-screen-button', 'solid', '' ); ?>
+            <?php echo ninoweb_icon( 'file-invoice-dollar', 'solid', '' ); ?>
 
             <span>
                 <?php
                 echo esc_html(
-                    ninoweb_text('hero_feature_mobile')
+                    ninoweb_text('hero_feature_pricing')
                 );
                 ?>
             </span>
         </li>
 
         <li>
-            <?php echo ninoweb_icon( 'magnifying-glass', 'solid', '' ); ?>
-
-            <span>
-                <?php
-                echo esc_html(
-                    ninoweb_text('hero_feature_seo')
-                );
-                ?>
-            </span>
-        </li>
-
-        <li>
-            <?php echo ninoweb_icon( 'screwdriver-wrench', 'solid', '' ); ?>
+            <?php echo ninoweb_icon( 'headset', 'solid', '' ); ?>
 
             <span>
                 <?php

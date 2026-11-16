@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const forms = document.querySelectorAll('.contact-form');
 
@@ -7,11 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const status = form.querySelector('.contact-form__status');
         const submitButton = form.querySelector('[type="submit"]');
 
+        let isSubmitting = false;
+
         form.addEventListener('submit', async (event) => {
             event.preventDefault();
 
+            if (isSubmitting) return;
+            isSubmitting = true;
+
             if (status) {
-                status.textContent = 'Sending...';
+                status.textContent =
+                    form.dataset.sendingText || 'Sending...';
+
                 status.classList.remove('is-success', 'is-error');
             }
 
@@ -27,46 +35,58 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: formData,
                 });
 
-               const responseText = await response.text();
+                const responseText = await response.text();
 
-console.log('Response status:', response.status);
-console.log('Response body:', responseText);
+                if (!responseText.trim()) {
+                    throw new Error(
+                        'The server returned an empty response. Please try again.'
+                    );
+                }
 
-if (!responseText.trim()) {
-    throw new Error(
-        `The server returned an empty response (${response.status}).`
-    );
-}
+                let result;
 
-let result;
-
-try {
-    result = JSON.parse(responseText);
-} catch {
-    throw new Error(
-        `The server returned invalid JSON: ${responseText.slice(0, 200)}`
-    );
-}
+                try {
+                    result = JSON.parse(responseText);
+                } catch {
+                    throw new Error(
+                        'Unexpected server response. Please try again.'
+                    );
+                }
 
                 if (!response.ok || !result.success) {
                     throw new Error(
                         result.data?.message ||
-                            'Something went wrong. Please try again.'
+                        'Something went wrong. Please try again.'
                     );
                 }
 
+                // Successful submission
                 if (status) {
-                    status.textContent = result.data.message;
+                    status.textContent = result.data?.message ||
+                        'Thank you. Your message has been sent.';
+
                     status.classList.add('is-success');
                 }
 
+                // Google Tag Manager conversion event
+                window.dataLayer = window.dataLayer || [];
+
+                window.dataLayer.push({
+                    event: 'ninoweb_contact_success',
+                });
+
+                // Reset the form
                 form.reset();
+
             } catch (error) {
                 if (status) {
                     status.textContent = error.message;
                     status.classList.add('is-error');
                 }
+
             } finally {
+                isSubmitting = false;
+
                 if (submitButton) {
                     submitButton.disabled = false;
                 }

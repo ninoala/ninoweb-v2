@@ -207,6 +207,7 @@ $instagram_url = 'https://www.instagram.com/ninowebstudio';
             class="contact-form"
             action="<?php echo esc_url(admin_url('admin-ajax.php')); ?>"
             method="post"
+            data-sending-text="<?php echo esc_attr(ninoweb_text('contact_sending')); ?>"
         >
             <input
                 type="hidden"
